@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<title>jQuery glowMe Hinter 1.0</title>
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="optional_js/jquery.animate-colors-min.js"></script>
+<script type="text/javascript" src="jQuery.glowMe.Hinter-1.0.min.js"></script>
+
+<style type="text/css">
+div#login {overflow:hidden;width:500px;height:500px;margin:0 auto;text-align:Center; position:relative; top:200px;}
+input#username,#password {width:250px;height:35px; font-size:17px;}
+</style>
+
+</head>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('input:text').glowMe({
+
+'glowThickness': '15px'
+
+});
+});
+</script>
+
+<body>
+
+<div id="login">
+<h2>MOONBUCK LOGIN</h2>
+<form action="#">
+<p><input id="username"  title="Username" maxlength="50"  name="username" value="Username" type="text" /></p>
+<p><input id="password"  title="Password" maxlength="50" name="password" value="Password" type="text" /></p>
+<input id="submit" value="Log-In" type="submit" />
+</form>
+</div>
+</body>
+</html>
