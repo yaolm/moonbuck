@@ -1,3 +1,31 @@
 html, body {
     font-family: Helvetica, Tahoma, Arial, 'Hiragino Sans GB', 'Microsoft UI Light', sans-serif;
 }
+div#loginbar p{text-align:right;}
+
+div#sidebar{float:left; width:150px;}
+h1, h2, h3, h4, h5, h6 { color: #333; font-weight: normal; }
+h3 { font-size: 20px; margin: 0 0 20px; padding: 0; }
+.sidebar_box {
+	position: relative;
+	background: #f0f0f0;
+	margin-bottom: 36px;
+	border: 1px solid #dbdbdb
+}
+.sidebar_box h3 { font-size: 14px; font-weight: 700; padding: 0 10px 0 35px; margin: 0; width: 185px; height: 33px; line-height: 33px; margin-bottom: 0; background: url(images/templatemo_sidebar_header.png)  no-repeat; color: #2f2f2f }
+
+#sidebar .sidebar_box .content {
+	padding: 10px 10px 0;
+}
+
+#sidebar .sidebar_list { margin: 0; padding: 0 0 10px; list-style: none; }
+#sidebar .sidebar_list li { display: block; margin: 0; padding: 5px 0; border-top: 1px solid #fff; border-bottom: 1px solid #d3d3d3 }
+#sidebar .sidebar_list li.first { border-top: none }
+#sidebar .sidebar_list li.last { border-bottom: none }
+#sidebar .sidebar_list li a { color: #666;   }
+#sidebar .sidebar_list li a:hover { color: #000; text-decoration: none }
+div.content_selectbutton{position:relative;top:20px;left:10px;}
+div.content_selectbutton h2{text-align:center;}
+div.content_selectbutton1{position:relative;top:20px;left:30px; border-bottom:1px solid #CCF}
+div.content_selectbutton1 select,input{margin:5px; padding:5px;}
+div.content_selectbutton2{position:relative;top:40px;text-align:center;font:Verdana, Geneva, sans-serif;font-style:italic;}
