@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
     
     	<link href="css/metro-bootstrap.css" rel="stylesheet" />
+
     	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="css/iconFont.css" rel="stylesheet">
     	<script src="js/jquery.min.js"></script>
@@ -128,44 +128,97 @@
                     </div>
                 </div>
             </nav>
-                <div id="sidebar">
-                         <div class="sidebar_box"><span class="bottom"></span>
-                                <h3>Categories</h3>   
-                                <div class="content"> 
-                                    <ul class="sidebar_list">
-                                        <li class="first"><a href="#">首页</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
-                                        <li><a href="#">用户管理</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;用户信息</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;分级信息</a></li>
-                                        <li><a href="#">项目管理</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;进程</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;新建</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
-                                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>                     
-                                        <li class="last"><a href="#">最后。。。</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                         </div>
+
+<div id="sidebar">
+         <div class="sidebar_box"><span class="bottom"></span>
+            	<h3>Categories</h3>   
+                <div class="content"> 
+                	<ul class="sidebar_list">
+                    	<li class="first"><a href="#">首页</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;用户信息</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;分级信息</a></li>
+                        <li><a href="#">项目管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;进程</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;新建</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>                     
+                        <li class="last"><a href="#">最后。。。</a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
          
             <div id="biaodan">
-			<h2>用户信息</h2>
-				
-                <form action="#">					
-			       用户卡号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="userno"  title="Userno"   name="userno" value="请输入用户卡号" type="text" /></br>
-      			   用户姓名：<input id="username"  title="Username" maxlength="50"  name="username" value="请输入用户姓名" type="text" />
-        		   电子邮箱：<input id="email"  title="email" name="email" value="请输入邮箱" type="email" />br
-        		   手机号码：<input id="mob_num"  title="mob_num" maxlength="13"  name="mob_num" value="请输入手机号" type="phone" />
-         
-			</form>
+           
+<h2>用户信息</h2>
+<form action="#">
 
- <p style="width:200px"> <input id="submit" value="确认添加" type="submit" /> </p>
-  <p style="width:200px"> <input id="submit" value="保存修改" type="submit" /> </p>
-   <p style="width:200px"> <input id="submit" value="删除用户" type="submit" /> </p>
+       用户卡号：<input id="userno"  title="Userno"   name="userno" value="请输入用户卡号" type="text" />
+      用户姓名：<input id="username"  title="Username" maxlength="50"  name="username" value="请输入用户姓名" type="text" />
+       <p>电子邮箱：<input id="email"  title="email" name="email" value="请输入邮箱" type="email" />
+        手机号码：<input id="mob_num"  title="mob_num" maxlength="13"  name="mob_num" value="请输入手机号" type="phone" /></p>
+         
+        <p>
+        生日：<input id=""  title="" maxlength="4"  name="" value="年"type="text" />
+            <input id="input"  title="" maxlength="2"  name="input" value="月"type="text" />
+            <input id=""  title="" maxlength="2"  name="" value="日"type="text" /></p>
+            
+         <p> 地址：<input style="width:600px;" id=""  title=""   name="" value="请输入居住地址" type="text" /></p>
+         
+           <p>
+           创建日期：<input id=""  title="" maxlength="4"  name="" value="年"type="text" />
+           <input id=""  title="" maxlength="2"  name="" value="月"type="text" />
+           <input id=""  title="" maxlength="2"  name="" value="日"type="text" /></p>
+           
+          积分：<input id=""  title=""   name="" value="现有积分" type="text" />
+         累计消费额：<input id=""  title=""   name="" value="" type="text" />
+        总利润：<input id=""  title=""   name="" value="" type="text" />
+         
+         <p>用户等级：<select id="my-dropdown" name="my-dropdown" >
+                        <option value="1"  selected="selected">请选择</option>
+                        <option value="2">黄金用户</option>
+                        <option value="3">钢铁用户</option>
+                        <option value="4">重铅用户</option>
+                         <option value="5">铂金用户</option>
+                    </select>
+</form>
+
+ <p> <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" /> <input style="margin:10px 40px" id="submit" value="删除用户" type="submit" /> </p>
         
+   </br></br></br></br></br>
     </div>
+    
+    <nav class="navigation-bar fixed-bottom light">
+                <nav class="navigation-bar-content">
+                    <div class="element place-right">
+                        <ul class="element-menu drop-up">
+                            <li>
+                                <a class="dropdown-toggle without-icon" href="#" style="padding:0 !important;">
+                                    <span class="icon-cog"></span>
+                                </a>
+                                <ul class="dropdown-menu place-right" data-role="dropdown">
+                                    <li><a href="#">锁定</a></li>
+                                    <li><a href="#">注销</a></li>
+                                    <li><a href="#">退出</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="element-divider place-right"></span>
+                    <button class="element  image-button image-left place-right">
+                        Moonbuck
+                        <img src="image/11.jpg" />
+                    </button>
+                    <span class="element-divider place-right"></span>
+                    <div class="element place-right">
+                        <span>北京大学信息管理系版权所有&copy;</span>
+                    </div>
+                </nav>
+            </nav>
+
             
 </body>
 </html>
