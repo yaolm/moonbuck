@@ -2,7 +2,7 @@
 <html>
 	<head>
    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/metro-bootstrap.css" rel="stylesheet" />
+    	<link href="css/metro-bootstrap.css" rel="stylesheet" />
     	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="css/iconFont.css" rel="stylesheet">
     	<script src="js/jquery.min.js"></script>
@@ -12,7 +12,7 @@
         <link rel="icon" href="image/logo.jpg" />
 
         <title>Home</title>
-    	<style></style>	
+    	<style></style>
     
 	</head>
     <body class="metro">
@@ -118,7 +118,7 @@
             	<h3>Categories</h3>   
                 <div class="content"> 
                 	<ul class="sidebar_list">
-                    	<li class="first"><a href=" ">PRM首页</a ></li>
+                    <li class="first"><a href=" ">PRM首页</a ></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>
                         <li><a href="#">公关项目进程</a ></li>
@@ -130,29 +130,41 @@
                         <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>                     
                         <li class="last"><a href="#">最后。。。</a ></li>
-                    </ul><>
+                    </ul>
                 </div>
             </div>
          </div>
          <!------------------------------------------------------------------->
-         <div id="CRMmainpage">
-   		  	 <div id="crmhyperimg">
-   		  	   <div class="tile double bg-olive" data-click="transform">
-   		  	     <div class="tile-content icon"><a href="#"><i class="icon-checkmark"></i></a></div>
-   		  	     <div class="tile-status">
-   		  	       <div class="name">项目进程</div>
-	  	         </div>
-	  	       </div>
-   		  	   <div class="tile double bg-darkGreen" data-click="transform">
-                 <div class="tile-content icon"><a href=#"><i class="icon-dollar-2"></i></a></div>
-                      <div class="tile-status"><div class="name">创建新项目</div></div>
-                 </div>
-               </div>           
-            
-            <div class="crmmaincontent">
-            asdfasdfasdf
+         <div id="content_result">
+   		  	<div class="select_result" style="overflow-x:hidden;overflow-y:scroll;width:800px;height:400px;">
+            <h2>PRM项目</h2>
+            	<table class="select_result">
+					<thead>
+                    	<th>媒体类型</th>
+                        <th>受众类型</th>
+                        <th>起止时间</th>
+                        <th>服务类型</th>
+                        <th>点击量</th>
+                        <th>实际交易价格</th>
+                     </thead>
+                     <tbody id="highlight">
+                        <tr>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                     </tbody>                                                
+                </table>
             </div>
-
+            <div class="select_resultbuttom">
+            	<form>                	
+                	<input type="button" value="添加项目">
+                    <input type="button" value="添加反馈">                    	
+                </form>
+            </div>
+           
          </div>   
          <!------------------------------------------------------------------->
             <nav class="navigation-bar fixed-bottom light">
