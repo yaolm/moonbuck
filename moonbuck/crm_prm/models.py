@@ -14,7 +14,7 @@ class customer(models.Model):
     cuCreate=models.TimeField()
     cuYear=models.IntegerField(max_length=3,null=True)
     cuBirth=models.TimeField()
-    cuZone=models.CharField(max_length=12,null=True)
+    cuZone-models.CharField(max_length=12,null=True)
     cuType=models.CharField(max_length=10,null=True)
     
     def __unicode__(self):
@@ -24,7 +24,7 @@ class piece(models.Model):
     piId=models.IntegerField(max_length=10,null=False)
     piProfit=models.FloatField(null=True)
     piTime=models.TimeField()
-    piPerfer=models.CharField(max_length=10,null=True)
+    piPerfer=models.CharField(null=True)
     piOff=models.IntegerField(max_length=20,null=True)
 
     def __unicode__(self):
@@ -33,7 +33,7 @@ class piece(models.Model):
 
 class order(models.Model):
     orId=models.IntegerField(max_length=20,null=False)
-    orCu=models.ForeignKey(customer)
+    orCu=models.ForeignKey(customer,cuID)
     orTime=models.TimeField()
     orPay=models.CharField(max_length=10,null=False)
     orOff=models.IntegerField(max_length=20,null=True)
@@ -42,18 +42,18 @@ class order(models.Model):
         return self.orId, self.orCu
 
 class orderPiece(models.Model):
-    opId=models.ForeignKey(order)
-    opPiece=models.ForeignKey(piece,related_name='PIid')
+    opId=models.ForeignKey(order,orId)
+    opPiece=models.ForeignKey(piece,piId)
     opNum=models.IntegerField(max_length=5,null=False)
     opOff=models.IntegerField(max_length=5,null=True)
-    opPrefer=models.ForeignKey(piece,related_name='Prefer')
+    opPrefer=models.ForeignKey(piece,piPrefer)
 
     def __unicode__(self):
         return self.opId,self.opPiece
 
 class project(models.Model):
     poId=models.IntegerField(max_length=10,null=False)
-    #È°æÂÆ¢Á±ªÂûãÂ§ÑÁêÜÊï∞ÊçÆÂ∫ìÈáå‰∏çÂ•ΩÂÅöÂïä
+    #πÀøÕ¿‡–Õ¥¶¿Ì ˝æ›ø‚¿Ô≤ª∫√◊ˆ∞°
     poCu=models.IntegerField(max_length=10,null=True)
     poBegin=models.TimeField()
     poEnd=models.TimeField()
@@ -62,9 +62,9 @@ class project(models.Model):
     def __unicode__(self):
         return self.poId,self.poType
     
-#Áî®Êà∑ÁªÑË°®ÊòØ‰ªÄ‰πàÈ¨º
+#”√ªß◊È±Ì « ≤√¥πÌ
 class customerGroup(models.Model):
-    grId=models.IntegerField(max_length=10,null=False)
+    grId=models.IntegerField(max_legnth=10,null=False)
     grTy=models.IntegerField(max_length=10,null=True)
 
     def __unicode__(self):
@@ -74,7 +74,7 @@ class customerGroup(models.Model):
 
 class media(models.Model):
     meId=models.IntegerField(max_length=10,null=False)
-    meTo=models.ForeignKey(customerGroup)
+    meTo=models.ForeignKey(customerGroup,grTy)
     meEffe=models.IntegerField(max_length=10,null=True)
     
     def __unicode__(self):
@@ -82,8 +82,8 @@ class media(models.Model):
 
 class price(models.Model):
     prId=models.IntegerField(max_length=10,null=False)
-    prMe=models.ForeignKey(media)
-    #ÊúçÂä°Á±ªÂûãÔºåÂéüÂàõ„ÄÅËØÑËÆ∫‰πãÁ±ª
+    prMe=models.ForeignKey(media,meId)
+    #∑˛ŒÒ¿‡–Õ£¨‘≠¥¥°¢∆¿¬€÷Æ¿‡
     prTy=models.IntegerField(max_length=10,null=True)
     prPr=models.IntegerField(max_length=10,null=True)
 
@@ -93,6 +93,6 @@ class price(models.Model):
 class orderMedia(models.Model):
     omId=models.IntegerField(max_length=10,null=False)
     omTi=models.TimeField()
-    omMe=models.ForeignKey(media)
-    omSer=models.ForeignKey(price)
+    omMe=models.ForeignKey(media,meId)
+    omSer=models.ForeignKey(price,prId)
     omPr=models.IntegerField(max_length=10,null=True)
