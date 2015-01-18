@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/metro-bootstrap.css" rel="stylesheet" />
+    	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
+        <link href="css/iconFont.css" rel="stylesheet">
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/jquery.widget.min.js"></script>
+    	<script src="js/metro.min.js"></script>
+    	<link href="css/mystyle.css" rel="stylesheet" />
+        <link rel="icon" href="image/logo.jpg" />
+        
+        <style type="text/css">
+div#biaodan {margin: 100px,auto; position:relative;}
+/*div.input-control text{width:500px;}
+input#username,#password {width:250px;height:35px; font-size:17px;}*/
+</style>
+
+<title>add_customer</title>
+</head>
+
+<body>
+ <body class="metro">
+        <div class="container">
+            <h1><img src="image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">后台管理系统</small></h1>
+            <p style="text-align:right"><a href="denglu/demo.html">login</a></p>
+            <nav class="navigation-bar">
+                <div class="navigation-bar-content">
+                    <div class="element">
+                        <a href="#" class="dropdown-toggle"><i class="icon-home"></i>导航栏</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">新手引导</a></li>
+                            <li><a href="#">帮助文档</a></li>
+                            <li><a href="#">建议与意见</a></li>
+                        </ul>
+                    </div>
+                    <span class="element-divider"></span>
+                    <div class="element" style="color:white;background-color:black">
+                        <a href="#" class="dropdown-toggle">娱乐</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">艺术空间</a></li>
+                            <li><a href="#">画廊</a></li>
+                            <li><a href="#">时尚店铺</a></li>
+                            <li><a href="#">个人工作室</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="element"style="color:white;background-color:black">
+                        <a href="#" class="dropdown-toggle" >地点</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">商品统计</a></li>
+                            <li><a href="#">店面任务</a></li>
+                            <li><a href="#">绩效</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="element">
+                        <a href="#" class="dropdown-toggle">仓库管理</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">货品清单</a></li>
+                            <li><a href="#">仓库分布</a></li>
+                            <li><a href="#">供给情况</a></li>
+                            <li><a href="#">关系变更</a></li>
+                            <li><a href="#">库存警告</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="element">
+                        <a href="#" class="dropdown-toggle">财务管理</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">报表查看</a></li>
+                            <li><a href="#">资金管理</a></li>
+                            <li><a href="#">银行关系</a></li>
+                            <li><a href="#">经销商情况</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="element">
+                        <a href="#" class="dropdown-toggle">客户关系管理</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">基本情况</a></li>
+                            <li><a href="#">用户管理</a></li>
+                            <li><a href="#">偏好情况</a></li>
+                            <li><a href="#">优惠项目</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                     <div class="element">
+                        <a href="#" class="dropdown-toggle">公共关系管理</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">基本情况</a></li>
+                            <li><a href="#">流程跟踪</a></li>
+                           <li><a href="#">新建项目</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="element">
+                        <a href="#" class="dropdown-toggle">知识管理</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">统计情况</a></li>
+                            <li><a href="#">分类管理</a></li>
+                            <li><a href="#">文章权限</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="element">
+                        <a href="#" class="dropdown-toggle">基本设置</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">人员管理</a></li>
+                            <li><a href="#">店面管理</a></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Some feature</a></li>
+                            <li><a href="#">Some feature</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="biaodan">
+           
+<h1>用户信息</h1>
+<form action="#">
+<div class="input-control text">
+       <p style="width:200px"> 用户卡号：<input id="userno"  title="Userno"   name="userno" value="请输入用户卡号" type="text" /></p>
+       <p style="width:200px"> 用户姓名：<input id="username"  title="Username" maxlength="50"  name="username" value="请输入用户姓名" type="text" /></p>
+        <p style="width:200px"> 电子邮箱：<input id="email"  title="email" name="email" value="请输入邮箱" type="email" /></p>
+        <p style="width:200px"> 手机号码：<input id="mob_num"  title="mob_num" maxlength="13"  name="mob_num" value="请输入手机号" type="phone" /></p>
+         
+        <p style="width:100px">
+        生日：<input id=""  title="" maxlength="4"  name="" value="年"type="text" />
+            <input id="input"  title="" maxlength="2"  name="input" value="月"type="text" />
+            <input id=""  title="" maxlength="2"  name="" value="日"type="text" /></p>
+            
+         <p style="width:400px"> 地址：<input id=""  title=""   name="" value="请输入住址" type="text" /></p>
+         
+           <p style="width:100px">
+           创建日期：<input id=""  title="" maxlength="4"  name="" value="年"type="text" />
+           <input id=""  title="" maxlength="2"  name="" value="月"type="text" />
+           <input id=""  title="" maxlength="2"  name="" value="日"type="text" /></p>
+           
+         <p style="width:200px"> 积分：<input id=""  title=""   name="" value="现有积分" type="text" /></p>
+         <p style="width:200px"> 累计消费额：<input id=""  title=""   name="" value="" type="text" /></p>
+         <p style="width:200px"> 总利润：<input id=""  title=""   name="" value="" type="text" /></p>
+         
+         <p>用户等级：<select id="my-dropdown" name="my-dropdown" >
+                        <option value="1"  selected="selected">请选择</option>
+                        <option value="2">黄金用户</option>
+                        <option value="3">钢铁用户</option>
+                        <option value="4">重铅用户</option>
+                         <option value="5">铂金用户</option>
+                    </select>
+</form>
+
+ <p style="width:200px"> <input id="submit" value="添加" type="submit" /> </p>
+  <p style="width:200px"> <input id="submit" value="修改" type="submit" /> </p>
+   <p style="width:200px"> <input id="submit" value="删除" type="submit" /> </p>
+        
+    </div>
+    </div>
+            
+</body>
+</html>
