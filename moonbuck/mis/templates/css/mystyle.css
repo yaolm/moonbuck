@@ -29,3 +29,14 @@ div.content_selectbutton h2{text-align:center;}
 div.content_selectbutton1{position:relative;top:20px;left:30px; border-bottom:1px solid #CCF}
 div.content_selectbutton1 select,input{margin:5px; padding:5px;}
 div.content_selectbutton2{position:relative;top:40px;text-align:center;font:Verdana, Geneva, sans-serif;font-style:italic;}
+.select_result table{border-collapse:collapse;margin:0px;padding:0px;width:75%;font-family: 'Lato', Calibri, Arial, sans-serif;font-size:75%;text-align:center;}
+.select_result thead th{border:1px solid black;text-indent:;font-weight:bold;text-align:left;font-size:120%;text-align:center;padding:10px 2px 10px 2px;font-size:18px;}
+.select_result thead td{padding:px 0px 12px 5px;border:1px solid black;}
+.select_result thead select,thead input{margin:0px 0px 0px 5px;}
+.select_result tbody tr{background-image:url(../images/table-dotted.gif);background-position:bottom left;background-repeat:repeat-x;}
+.select_result tbody td{;text-indent:5px;}
+.select_result tbody tr.highlighted{background-color:#FAFAFA !important;}
+.select_result tbody tr.hoverHighlighted{background-color:#DFE6EB !important;}
+div#content_result{position:relative;top:20px;left:20px}
+div#crmhyperimg{width:990px;height:160px}
+div.tile,double,bg-olive{position:relative;left:20%;top:20px}
