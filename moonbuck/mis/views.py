@@ -7,9 +7,9 @@ from django.template.loader import get_template
 from django.shortcuts import render_to_response
 import datetime
 
-from models import *
+from django.db.models import *
 
 def homepage(request):
     pagetitle = "Home"
     content = ""
-    return render_to_response('base.html',locals())
+    return render_to_response('index.html',locals())
