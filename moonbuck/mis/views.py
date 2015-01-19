@@ -5,6 +5,7 @@ from django.http import HttpResponse,Http404
 from django.template import Template, Context, RequestContext
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
+from django.views.decorators.csrf import csrf_exempt
 import datetime
 
 from django.db.models import *
@@ -19,6 +20,7 @@ def crmHome(request):
 def prmHome(request):
     return render_to_response('PRM首页.html',locals())
 
+@csrf_exempt
 def crm_adduser(request):
     errors = []
     if request.method == 'POST':
@@ -48,11 +50,13 @@ def crm_user_search(request):
 
 def crm_user_searchresult(request):
     if request.method == 'GET':
-        query = request.GET
-        print(query)
-        if query['participant1'][0] == '1':
-            return HttpResponse("nothing to response")
-            #return render_to_response('CRM查询结果.html',locals())
+        if 'participant1' & 'textcontent1' in request.GET:
+            participant1=request.GET['participant1'][0]
+            textcontent1=request.GET['textcontent1'][0]
+            print( participant1)
+            if participant1 == 2:
+                record=customer.objects.filter(cuName=textcontent1)
+            return render_to_response('CRM查询结果.html',locals())
         else:
             return HttpResponse("something to response")
             #return render_to_response('CRM检索页面.html',locals())
@@ -69,6 +73,7 @@ def crm_user_searchresult(request):
 def favor(request):
     return render_to_response('credit.html',locals())
 
+#√
 def crmproject(request):
     record=project.objects.all()
     return render_to_response('CRM优惠项目进程.html',locals())

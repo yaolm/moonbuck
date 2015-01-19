@@ -93,6 +93,6 @@ class price(models.Model):
 class orderMedia(models.Model):
     omId = models.IntegerField(max_length=10,null=False)
     omTi = models.TimeField()
-    omMe = models.ForeignKey(media)
-    omSer = models.ForeignKey(price)
+    omMe = models.IntegerField(max_length=10,null=False)
+    omSer = models.IntegerField(max_length=10,null=True)
     omPr = models.IntegerField(max_length=10,null=True)
