@@ -1,22 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="../../static/css/metro-bootstrap.css" rel="stylesheet" />
-        <link href="../../static/css/metro-bootstrap-responsive.css" rel="stylesheet" />
-        <link href="../../static/css/iconFont.css" rel="stylesheet">
-        <script src="../../static/js/jquery.min.js"></script>
-        <script src="../../static/js/jquery.widget.min.js"></script>
-        <script src="../../static/js/metro.min.js"></script>
-        <link href="../../static/css/mystyle.css" rel="stylesheet" />
-        <link rel="icon" href="../../static/image/logo.jpg" />
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<link href="css/metro-bootstrap.css" rel="stylesheet" />
+    	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
+        <link href="css/iconFont.css" rel="stylesheet">
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/jquery.widget.min.js"></script>
+    	<script src="js/metro.min.js"></script>
+    	<link href="css/mystyle.css" rel="stylesheet" />
+        <link rel="icon" href="image/logo.jpg" />
 
         <title>Home</title>
-        <style></style>
-    </head>
+    	<style></style>
+	</head>
     <body class="metro">
         <div class="container">
-            <h1><img src="../../static/image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">后台管理系统</small></h1>
+            <h1><img src="image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">CRM后台管理系统</small></h1>
             <nav class="navigation-bar">
                 <div class="navigation-bar-content">
                     <div class="element">
@@ -111,69 +111,80 @@
                     </div>
                 </div>
             </nav>
-            
-            <div class="tile-area">
-                <div class="tile double double-vertical live bg-darkBlue" data-role="live-tile" data-effect="slideup" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-droplet"></i>
-                    </div>
-                    <div class="tile-content fg-white" style="padding:10px;">
-                        <i class="icon-droplet"></i>库存信息
-                        <div style="font-size:50%;">
-                            <ul class="fg-white">
-                                <li>咖啡豆 blahblahblah</li>
-                                <li>方糖 blahblahblah</li>
-                                <li>Blah blahblahblah</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">
-                            仓库管理
-                        </div>
-                    </div>
-                </div>
-                <div class="tile double bg-lightBlue" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-paypal"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">采购管理</div>
-                    </div>
-                </div>
-                <div class="tile bg-violet" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-flag"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">销售管理</div>
-                    </div>
-                </div>
-                <div class="tile bg-green" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-cog"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">基本设置</div>
-                    </div>
-                </div>
-                <div class="tile double bg-darkGreen" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-dollar-2"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">资金管理</div>
-                    </div>
-                </div>
-                <div class="tile double bg-olive" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-checkmark"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">知识管理</div>
-                    </div>
+         <!------------------------------------------------------------------->
+         <div id="sidebar">
+         <div class="sidebar_box"><span class="bottom"></span>
+            	<h3>Categories</h3>   
+                <div class="content"> 
+                	<ul class="sidebar_list">
+                    	<li class="first"><a href="#">首页</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;用户信息</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;分级信息</a></li>
+                        <li><a href="#">项目管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;进程</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;新建</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>                     
+                        <li class="last"><a href="#">最后。。。</a></li>
+                    </ul>
                 </div>
             </div>
+         </div>
+         <!------------------------------------------------------------------->
+         <div id="content">
+   		   <div class="content_selectbutton1">
+           		<h2>检索页面</h2>
+                <form>
+                   选项: <select id="participant" name="participant">
+                        <option value="1"  selected="selected">请选择</option>
+                        <option value="2">用户名</option>
+                        <option value="3">邮箱</option>
+                        <option value="4">积分</option>
+                        <option value="5">累计消费额</option>
+                        <option value="6">人群类型</option>
+                        <option value="7">消费卡号</option>
+                    </select>
+                    输入：<input type="text" name="textcontent" />
+                    <select><option value="1">AND</option>
+                    <option value="2">OR</option></select></br>
+                    选项:<select id="participant" name="participant">
+                        <option value="1"  selected="selected">请选择</option>
+                        <option value="2">用户名</option>
+                        <option value="3">邮箱</option>
+                        <option value="4">积分</option>
+                        <option value="5">累计消费额</option>
+                        <option value="6">人群类型</option>
+                        <option value="7">消费卡号</option>
+                    </select>
+                    输入：<input type="text" name="textcontent" />
+                    <select><option value="1">AND</option>
+                    <option value="2">OR</option></select><input style="float:right;width:100px;height:60px;" type="submit" value="确定"><br>
+                    选项:<select id="participant" name="participant">
+                        <option value="1"  selected="selected">请选择</option>
+                        <option value="2">用户名</option>
+                        <option value="3">邮箱</option>
+                        <option value="4">积分</option>
+                        <option value="5">累计消费额</option>
+                        <option value="6">人群类型</option>
+                        <option value="7">消费卡号</option>
+                    </select>
+                    输入：<input type="text" name="textcontent" />
+                    <select><option value="1">AND</option>
+                    <option value="2">OR</option></select><br>
+                   
+                    </form>
+                 </div>
+                 <div class="content_selectbutton2">
+                 	<form>
+                    	<input type="button" value="新建">
+                    </form>
+                 </div>
+           </div>
+         </div>   
+         <!------------------------------------------------------------------->
             <nav class="navigation-bar fixed-bottom light">
                 <nav class="navigation-bar-content">
                     <div class="element place-right">
@@ -193,7 +204,7 @@
                     <span class="element-divider place-right"></span>
                     <button class="element  image-button image-left place-right">
                         Moonbuck
-                        <img src="../../static/image/11.jpg" />
+                        <img src="image/11.jpg" />
                     </button>
                     <span class="element-divider place-right"></span>
                     <div class="element place-right">
@@ -202,5 +213,5 @@
                 </nav>
             </nav>
         </div>
-    </body>
+	</body>
 </html>
