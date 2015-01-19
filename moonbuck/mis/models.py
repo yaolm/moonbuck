@@ -11,8 +11,9 @@ class customer(models.Model):
     cuPhone = models.CharField(max_length=13,null=False) 
     cuScore = models.IntegerField(max_length=16,null=False)
     cuCreate = models.TimeField()
-    cuYear = models.IntegerField(max_length=3,null=True)
-    cuBirth = models.TimeField()
+    cuYear = models.IntegerField(max_length=4,null=True)
+    cumonth = models.IntegerField(max_length=2,null=True)
+    cuday = models.IntegerField(max_length=2,null=True)
     cuZone = models.CharField(max_length=12,null=True)
     cuType = models.CharField(max_length=10,null=True)
     
@@ -73,7 +74,7 @@ class customerGroup(models.Model):
 
 class media(models.Model):
     meId = models.IntegerField(max_length=10,null=False)
-    meTo = models.ForeignKey(customerGroup)
+    meTo = models.CharField(max_length=10,null=True)
     meEffe = models.IntegerField(max_length=10,null=True)
     
     def __unicode__(self):
@@ -92,6 +93,6 @@ class price(models.Model):
 class orderMedia(models.Model):
     omId = models.IntegerField(max_length=10,null=False)
     omTi = models.TimeField()
-    omMe = models.ForeignKey(media)
-    omSer = models.ForeignKey(price)
+    omMe = models.IntegerField(max_length=10,null=False)
+    omSer = models.IntegerField(max_length=10,null=True)
     omPr = models.IntegerField(max_length=10,null=True)
