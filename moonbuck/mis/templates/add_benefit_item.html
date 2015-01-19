@@ -208,7 +208,7 @@
           </div>
           <div class="content_selectbutton1">
           <h3>优惠政策</h3>
-          选项:<select style="width:200px;margin:10px 5px;" id="items" name="items">
+          选项:<select style="width:200px;margin:10px 5px;" id="items" action="/crm/project/detail/" method="POST" name="items" enctype="application/x-www-form-urlencoded">
                         <option value="1"  selected="selected">请选择</option>
                         <option value="2">买就送</option>
                         <option value="3">满就送</option>
@@ -222,7 +222,11 @@
          
        </br></br></br> <!-- 买M送N商品活动价买X送满X送办卡充值 送满立减；积分兑换金钱折扣（即不换钱，换减价）/物品新品尝鲜（试用装）-->
 
- <p align="center";> <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" /> <input style="margin:10px 40px" id="submit" value="删除项目" type="submit" /> </p>
+ <p align="center;"> 
+<input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> 
+<input style="margin:10px 40px" id="submit" value="保存修改" type="submit" /> 
+<input style="margin:10px 40px" id="submit" value="删除项目" type="submit" /> 
+</p>
         
    </br></br></br></br></br>
     </div>

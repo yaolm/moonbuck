@@ -96,10 +96,30 @@ def crmaddproject(request):
     return render_to_response('add_benefit_item.html',locals())
 def crmprojectdetail(request):
     #需要按照优惠的类型返回不同的页面，这里只是为了先把函数定义了
-    return render_to_response('youhuizhengce_jifenduihuan.html',locals())
+    if request.method == "POST":
+        q=request.POST
+        items=q['items'][0]
+        print(items)
+        if items == 1:
+            return HttpResponseRedirect('/crm/project/add')
+        if items == 2:
+            return render_to_response('youhuizhengce_maijiusong.html',locals())
+        if items == 3:
+            return render_to_response('youhuizhengce_manjiusong.html',locals())
+        if items == 4:
+            return render_to_response('youhuizhengce_tejiashangpin.html',locals())
+        if items == 5:
+            return render_to_response('youhuizhengce_manjiujian.html',locals())
+        if items == 6:
+            return render_to_response('youhuizhengce_jifenduihuan.html',locals())
+        if items == 7:
+            return render_to_response('youhuizhengce_xinpinchangxianjia.html',locals())
 
+    return render_to_response('add_benefit_item.html',locals())
 
 def prmproject(request):
+    return render_to_response('已有公关媒体信息.html',locals())
+def prmprojectdetail(request):
     return render_to_response('PRM项目进程.html',locals())
 def additem(request):
     return render_to_response('add_public_item.html',locals())

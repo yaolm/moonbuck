@@ -37,12 +37,13 @@ urlpatterns = patterns('',
     ('^crm/project/$',views.crmproject),
     ('^crm/project/add/$',views.crmaddproject),
     #3具体优惠政策
-    ('^crm/project/detail/(\d{1})/$',views.crmprojectdetail),
+    ('^crm/project/detail/$',views.crmprojectdetail),
 
 
     #下面是PRM
     ('^prm/project/$',views.prmproject),
     ('^prm/add/item/$',views.additem),
     ('^prm/add/media/$',views.addmedia),
+    ('^prm/project/detail/$',views.prmprojectdetail),
 
 )
