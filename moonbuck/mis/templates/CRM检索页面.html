@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 	<head>
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -21,6 +22,7 @@
         <div class="container">
            <h1><img src="/static/image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">CRM后台管理系统</small></h1>
              <p style="text-align:right"><a href="/static/denglu/demo.html">Login</a></p>
+
             <nav class="navigation-bar">
                 <div class="navigation-bar-content">
                     <div class="element">
@@ -111,11 +113,13 @@
          <!------------------------------------------------------------------->
                  <div id="sidebar">
          <div class="sidebar_box"><span class="bottom"></span>
-            	<h3>Categories</h3>   
+                <h3>Categories</h3>   
                 <div class="content"> 
+
                 	<ul class="sidebar_list">
                     	<li class="first"><a href="#">CRM首页</a></li>
                        
+
                         <li><a href="#">用户管理</a></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;用户查询</a></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;添加用户</a></li>
@@ -130,10 +134,10 @@
          </div>
          <!------------------------------------------------------------------->
          <div id="content">
-   		   <div class="content_selectbutton1">
-           		<h2>检索页面</h2>
-                <form action="/crm/search/result/" method="get">
-                   选项: <select id="participant" name="participant1">
+           <div class="content_selectbutton1">
+                <h2>检索页面</h2>
+                <form action="./result/" method="post" enctype="application/x-www-form-urlencoded">
+                    选项: <select id="participant1" name="participant1">
                         <option value="1"  selected="selected">请选择</option>
                         <option value="2">用户名</option>
                         <option value="3">邮箱</option>
@@ -142,12 +146,13 @@
                         <option value="6">人群类型</option>
                         <option value="7">消费卡号</option>
                     </select>
-                    输入：
-                    <input type="text" name="textcontent1" />
-                    <select><option value="1">AND</option>
-                    <option value="2">OR</option></select></br>
-                    选项:<select id="participant" name="participant2">
-                        <option value="1"  selected="selected">请选择</option>
+                    输入：<input type="text" name="textcontent1" />
+                    <select id="option1" name="option1">
+                        <option value="1">AND</option>
+                        <option value="2">OR</option>
+                    </select><br />
+                    选项:<select id="participant2" name="participant2">
+                        <option value="1" selected="selected">请选择</option>
                         <option value="2">用户名</option>
                         <option value="3">邮箱</option>
                         <option value="4">积分</option>
@@ -155,14 +160,14 @@
                         <option value="6">人群类型</option>
                         <option value="7">消费卡号</option>
                     </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select><option value="1">AND</option>
-                    <option value="2">OR</option></select>
-                    
-                    <input style="float:right;width:100px;height:60px;" type="submit" value="确定" action="/crm/search/result/"><br>
-
-                    选项:<select id="participant" name="participant3">
-                        <option value="1"  selected="selected">请选择</option>
+                    输入：<input type="text" name="textcontent2" />
+                    <select id="option2" name="option2">
+                        <option value="1">AND</option>
+                        <option value="2">OR</option>
+                    </select>
+                    <input style="float:right;width:100px;height:60px;" type="submit" value="确定"><br />
+                    选项:<select id="participant3" name="participant3">
+                        <option value="1" selected="selected">请选择</option>
                         <option value="2">用户名</option>
                         <option value="3">邮箱</option>
                         <option value="4">积分</option>
@@ -170,20 +175,22 @@
                         <option value="6">人群类型</option>
                         <option value="7">消费卡号</option>
                     </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select><option value="1">AND</option>
-                    <option value="2">OR</option></select><br>
-                   
-                    </form>
+                    输入：<input type="text" name="textcontent3" />
+                    <select id="option3" name="option3">
+                        <option value="1">AND</option>
+                        <option value="2">OR</option>
+                    </select>
+                </form>
                  </div>
                  <div class="content_selectbutton2">
-                 	<form>
-                    	<input type="button" value="新建">
+                    <form>
+                        <input type="button" value="新建">
                     </form>
                  </div>
-           </div>
-         </div>   
-         <!------------------------------------------------------------------->
+            </div>
+        </div>   
+        <!------------------------------------------------------------------->
+        <div>
             <nav class="navigation-bar fixed-bottom light">
                 <nav class="navigation-bar-content">
                     <div class="element place-right">
@@ -212,5 +219,5 @@
                 </nav>
             </nav>
         </div>
-	</body>
+    </body>
 </html>
