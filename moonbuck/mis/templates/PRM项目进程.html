@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 	<head>
-    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     	<link href="css/metro-bootstrap.css" rel="stylesheet" />
     	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="css/iconFont.css" rel="stylesheet">
@@ -13,10 +13,11 @@
 
         <title>Home</title>
     	<style></style>
+    
 	</head>
     <body class="metro">
         <div class="container">
-            <h1><img src="image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">CRM后台管理系统</small></h1>
+            <h1><img src="image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">PRM后台管理系统</small></h1>
             <nav class="navigation-bar">
                 <div class="navigation-bar-content">
                     <div class="element">
@@ -117,72 +118,53 @@
             	<h3>Categories</h3>   
                 <div class="content"> 
                 	<ul class="sidebar_list">
-                    	<li class="first"><a href="#">首页</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
-                        <li><a href="#">用户管理</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;用户信息</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;分级信息</a></li>
-                        <li><a href="#">项目管理</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;进程</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;新建</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>                     
-                        <li class="last"><a href="#">最后。。。</a></li>
+                    <li class="first"><a href=" ">PRM首页</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>
+                        <li><a href="#">公关项目进程</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;查看项目</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;编辑项目</a ></li>
+                        <li><a href="#">公关对象管理</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;已有公关对象</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;编辑公关对象</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a ></li>                     
+                        <li class="last"><a href="#">最后。。。</a ></li>
                     </ul>
                 </div>
             </div>
          </div>
          <!------------------------------------------------------------------->
-         <div id="content">
-   		   <div class="content_selectbutton1">
-           		<h2>检索页面</h2>
-                <form>
-                   选项: <select id="participant" name="participant">
-                        <option value="1"  selected="selected">请选择</option>
-                        <option value="2">用户名</option>
-                        <option value="3">邮箱</option>
-                        <option value="4">积分</option>
-                        <option value="5">累计消费额</option>
-                        <option value="6">人群类型</option>
-                        <option value="7">消费卡号</option>
-                    </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select><option value="1">AND</option>
-                    <option value="2">OR</option></select></br>
-                    选项:<select id="participant" name="participant">
-                        <option value="1"  selected="selected">请选择</option>
-                        <option value="2">用户名</option>
-                        <option value="3">邮箱</option>
-                        <option value="4">积分</option>
-                        <option value="5">累计消费额</option>
-                        <option value="6">人群类型</option>
-                        <option value="7">消费卡号</option>
-                    </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select><option value="1">AND</option>
-                    <option value="2">OR</option></select><input style="float:right;width:100px;height:60px;" type="submit" value="确定"><br>
-                    选项:<select id="participant" name="participant">
-                        <option value="1"  selected="selected">请选择</option>
-                        <option value="2">用户名</option>
-                        <option value="3">邮箱</option>
-                        <option value="4">积分</option>
-                        <option value="5">累计消费额</option>
-                        <option value="6">人群类型</option>
-                        <option value="7">消费卡号</option>
-                    </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select><option value="1">AND</option>
-                    <option value="2">OR</option></select><br>
-                   
-                    </form>
-                 </div>
-                 <div class="content_selectbutton2">
-                 	<form>
-                    	<input type="button" value="新建">
-                    </form>
-                 </div>
-           </div>
+         <div id="content_result">
+   		  	<div class="select_result" style="overflow-x:hidden;overflow-y:scroll;width:800px;height:400px;">
+            <h2>PRM项目</h2>
+            	<table class="select_result">
+					<thead>
+                    	<th>媒体类型</th>
+                        <th>受众类型</th>
+                        <th>起止时间</th>
+                        <th>服务类型</th>
+                        <th>点击量</th>
+                        <th>实际交易价格</th>
+                     </thead>
+                     <tbody id="highlight">
+                        <tr>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                     </tbody>                                                
+                </table>
+            </div>
+            <div class="select_resultbuttom">
+            	<form>                	
+                	<input type="button" value="添加项目">
+                    <input type="button" value="添加反馈">                    	
+                </form>
+            </div>
+           
          </div>   
          <!------------------------------------------------------------------->
             <nav class="navigation-bar fixed-bottom light">
