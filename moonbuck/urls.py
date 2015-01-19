@@ -24,5 +24,6 @@ urlpatterns = patterns('',
     ('^crm/search/$',views.crm_user_search),
     ('^crm/search/result/$',views.crm_user_searchresult),
     ('^crm/add/$',views.crm_adduser),
+    ('')
 
 )

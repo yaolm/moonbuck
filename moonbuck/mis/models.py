@@ -11,8 +11,9 @@ class customer(models.Model):
     cuPhone = models.CharField(max_length=13,null=False) 
     cuScore = models.IntegerField(max_length=16,null=False)
     cuCreate = models.TimeField()
-    cuYear = models.IntegerField(max_length=3,null=True)
-    cuBirth = models.TimeField()
+    cuYear = models.IntegerField(max_length=4,null=True)
+    cumonth = models.IntegerField(max_length=2,null=True)
+    cuday = models.IntegerField(max_length=2,null=True)
     cuZone = models.CharField(max_length=12,null=True)
     cuType = models.CharField(max_length=10,null=True)
     
