@@ -20,7 +20,9 @@ urlpatterns = patterns('',
     ('^index/$',views.homepage),
     ('^crm/$',views.crmHome),
     ('^prm/$',views.prmHome),
+    ('^crm/adduser/$',views.crm_adduser),
     ('^crm/search/$',views.crm_user_search),
     ('^crm/search/result/$',views.crm_user_searchresult),
+    ('^crm/add/$',views.crm_adduser),
 
 )
