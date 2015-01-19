@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    	<link href="css/metro-bootstrap.css" rel="stylesheet" />
+    	<link href="../../static/css/metro-bootstrap.css" rel="stylesheet" />
 
-    	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
-        <link href="css/iconFont.css" rel="stylesheet">
-    	<script src="js/jquery.min.js"></script>
-    	<script src="js/jquery.widget.min.js"></script>
-    	<script src="js/metro.min.js"></script>
-    	<link href="css/mystyle.css" rel="stylesheet" />
+    	<link href="../../static/css/metro-bootstrap-responsive.css" rel="stylesheet" />
+        <link href="../../static/css/iconFont.css" rel="stylesheet">
+    	<script src="../../static/js/jquery.min.js"></script>
+    	<script src="../../static/js/jquery.widget.min.js"></script>
+    	<script src="../../static/js/metro.min.js"></script>
+    	<link href="../../static/css/mystyle.css" rel="stylesheet" />
         <link rel="icon" href="image/logo.jpg" />
 
 <title>add_customer</title>
@@ -154,7 +154,7 @@
 <div class="biaodan">
            
 <h2 align="center";>用户信息</h2>
-<form action="#">
+<form action="#" method="POST">
 
        用户卡号：<input id="userno"  title="Userno"   name="userno" value="请输入用户卡号" type="text" />
       用户姓名：<input id="username"  title="Username" maxlength="50"  name="username" value="请输入用户姓名" type="text" />
@@ -162,18 +162,18 @@
         手机号码：<input id="mob_num"  title="mob_num" maxlength="13"  name="mob_num" value="请输入手机号" type="phone" /></p>
          
         <p>
-        生日：<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
-            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="input" type="text" />月
-            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="text" />日</p>
+        生日：<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="birthyear" type="text" />年
+            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="birthmonth" type="text" />月
+            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="birthday" type="text" />日</p>
             
-         <p> 地址：<input style="width:600px;" id=""  title=""   name="" value="请输入居住地址" type="text" /></p>
+         <p> 地址：<input style="width:600px;" id=""  title=""   name="address" value="请输入居住地址" type="text" /></p>
          
            <p>
-           创建日期<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
-            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="input" type="text" />月
-            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="text" />日</p>
+           创建日期<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="cryear" type="text" />年
+            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="crmonth" type="text" />月
+            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="crday" />日</p>
            
-          积分：<input id=""  title=""   name="" value="现有积分" type="text" />
+          积分：<input id=""  title=""   name="score" value="现有积分" type="text" />
          累计消费额：<input id=""  title=""   name="" value="" type="text" />
         总利润：<input id=""  title=""   name="" value="" type="text" />
          
@@ -186,7 +186,10 @@
                     </select>
 </form>
 
- <p align="center";> <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" /> <input style="margin:10px 40px" id="submit" value="删除用户" type="submit" /> </p>
+ <p align="center";> 
+ <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> 
+ <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" /> 
+ <input style="margin:10px 40px" id="submit" value="删除用户" type="submit" /> </p>
         
    </br></br></br></br></br>
     </div>
@@ -210,7 +213,7 @@
                     <span class="element-divider place-right"></span>
                     <button class="element  image-button image-left place-right">
                         Moonbuck
-                        <img src="image/11.jpg" />
+                        <img src="/static/image/11.jpg" />
                     </button>
                     <span class="element-divider place-right"></span>
                     <div class="element place-right">
