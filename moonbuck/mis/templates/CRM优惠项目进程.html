@@ -1,22 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="css/metro-bootstrap.css" rel="stylesheet" />
-        <link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
+	<head>
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<link href="css/metro-bootstrap.css" rel="stylesheet" />
+    	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="css/iconFont.css" rel="stylesheet">
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.widget.min.js"></script>
-        <script src="js/metro.min.js"></script>
-        <link href="css/mystyle.css" rel="stylesheet" />
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/jquery.widget.min.js"></script>
+    	<script src="js/metro.min.js"></script>
+    	<link href="css/mystyle.css" rel="stylesheet" />
         <link rel="icon" href="image/logo.jpg" />
 
         <title>Home</title>
-        <style></style>
-    </head>
+    	<style></style>
+    
+	</head>
     <body class="metro">
         <div class="container">
-            <h1><img src="image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">后台管理系统</small></h1>
+            <h1><img src="image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">PRM后台管理系统</small></h1>
             <nav class="navigation-bar">
                 <div class="navigation-bar-content">
                     <div class="element">
@@ -111,69 +112,62 @@
                     </div>
                 </div>
             </nav>
-            
-            <div class="tile-area">
-                <div class="tile double double-vertical live bg-darkBlue" data-role="live-tile" data-effect="slideup" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-droplet"></i>
-                    </div>
-                    <div class="tile-content fg-white" style="padding:10px;">
-                        <i class="icon-droplet"></i>库存信息
-                        <div style="font-size:50%;">
-                            <ul class="fg-white">
-                                <li>咖啡豆 blahblahblah</li>
-                                <li>方糖 blahblahblah</li>
-                                <li>Blah blahblahblah</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">
-                            仓库管理
-                        </div>
-                    </div>
-                </div>
-                <div class="tile double bg-lightBlue" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-paypal"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">采购管理</div>
-                    </div>
-                </div>
-                <div class="tile bg-violet" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-flag"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">销售管理</div>
-                    </div>
-                </div>
-                <div class="tile bg-green" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-cog"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">基本设置</div>
-                    </div>
-                </div>
-                <div class="tile double bg-darkGreen" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-dollar-2"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">资金管理</div>
-                    </div>
-                </div>
-                <div class="tile double bg-olive" data-click="transform">
-                    <div class="tile-content icon">
-                        <i class="icon-checkmark"></i>
-                    </div>
-                    <div class="tile-status">
-                        <div class="name">知识管理</div>
-                    </div>
+         <!------------------------------------------------------------------->
+         <div id="sidebar">
+         <div class="sidebar_box"><span class="bottom"></span>
+            	<h3>Categories</h3>   
+                <div class="content"> 
+                	<ul class="sidebar_list">
+                    	<li class="first"><a href="#">首页</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;用户信息</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;分级信息</a></li>
+                        <li><a href="#">项目管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;进程</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;新建</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;Empty</a></li>                     
+                        <li class="last"><a href="#">最后。。。</a></li>
+                    </ul><>
                 </div>
             </div>
+         </div>
+         <!------------------------------------------------------------------->
+         <div id="content_result">
+   		  	<div class="select_result" style="overflow-x:hidden;overflow-y:scroll;width:800px;height:400px;">
+            <h2>优惠项目</h2>
+            	<table class="select_result">
+					<thead>
+                    	<th>人群</th>
+                        <th>起始时间</th>
+                        <th>终止时间</th>
+                        <th>活动类型</th>
+                        <th>参与人数</th>
+                     </thead>
+                     <tbody id="highlight">
+                        <tr>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                     </tbody>                                                
+                </table>
+            </div>
+            <div class="select_resultbuttom">
+            	<form>
+                	
+                	<input type="button" value="添加优惠项目">
+                    <input type="button" value="终止优惠项目">
+                    <input type="button" value="编辑优惠项目">	
+                </form>
+            </div>
+           
+         </div>   
+         <!------------------------------------------------------------------->
             <nav class="navigation-bar fixed-bottom light">
                 <nav class="navigation-bar-content">
                     <div class="element place-right">
@@ -202,5 +196,5 @@
                 </nav>
             </nav>
         </div>
-    </body>
+	</body>
 </html>
