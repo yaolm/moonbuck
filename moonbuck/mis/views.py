@@ -51,11 +51,11 @@ def crm_user_search(request):
 def crm_user_searchresult(request):
     if request.method == 'GET':
         if 'participant1' & 'textcontent1' in request.GET:
-            participant1=request.GET['participant1'][0]
-            textcontent1=request.GET['textcontent1'][0]
-            print( participant1)
+            participant1 = request.GET['participant1'][0]
+            textcontent1 = request.GET['textcontent1'][0]
+            print(participant1)
             if participant1 == 2:
-                record=customer.objects.filter(cuName=textcontent1)
+                record = customer.objects.filter(cuName=textcontent1)
             return render_to_response('CRM查询结果.html',locals())
         else:
             return HttpResponse("something to response")
@@ -67,15 +67,26 @@ def crm_user_searchresult(request):
             return HttpResponse("nothing to response")
         else:
             p1 = query['participant1'][0]
+            t1 = query['textcontent1'][0]
             if p1 == '2':
+                record = customer.objects.filter(cuName=t1)
+            elif p1 == '3':
+                record = customer.objects.filter(cuEmail=t1)
+            elif p1 == '4':
+                record = customer.objects.filter(cuScore=int(t1))
+            elif p1 == '5':
+                record = customer.objects.filter()
                 pass
-
+            elif p1 == '6':
+                record = customer.objects.filter(cuType=t1)
+            elif p1 == '7':
+                record = customer.objects.filter(cuId=int(t1))
 def favor(request):
     return render_to_response('credit.html',locals())
 
 #√
 def crmproject(request):
-    record=project.objects.all()
+    record = project.objects.all()
     return render_to_response('CRM优惠项目进程.html',locals())
 
 def crmaddproject(request):
