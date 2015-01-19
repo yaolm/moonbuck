@@ -48,18 +48,23 @@ def crm_user_search(request):
 
 def crm_user_searchresult(request):
     if request.method == 'GET':
-        if 'participant1' & 'textcontent1' in request.GET:
-            participant1 = request.GET['participant1']
-            textcontent1 = request.GET['textcontent1']
-            if participant1 == 2:
-                record = mis.objects.filter(cuName=textcontent1)
-            return render_to_response('CRM查询结果.html',locals())
+        query = request.GET
+        print(query)
+        if query['participant1'][0] == '1':
+            return HttpResponse("nothing to response")
+            #return render_to_response('CRM查询结果.html',locals())
         else:
-            return render_to_response('CRM检索页面.html',locals())
+            return HttpResponse("something to response")
+            #return render_to_response('CRM检索页面.html',locals())
     elif request.method == 'POST':
         query = request.POST
-        if query.get('participant1') != 1:
+        print(query)
+        if query.get('participant1')[0] == '1':
             return HttpResponse("nothing to response")
+        else:
+            p1 = query['participant1'][0]
+            if p1 == '2':
+                pass
 
 def favor(request):
     return render_to_response('credit.html',locals())
