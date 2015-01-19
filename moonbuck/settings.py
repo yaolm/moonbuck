@@ -11,17 +11,30 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
+    # mysql version
     'default': {
-        'ENGINE': 'django.db.backends.mysql',#'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.mysql',#'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or
+                                             #'oracle'.
         'NAME':'mis',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
         'PASSWORD': 'password',                  # Not used with sqlite3.
-        'HOST': '',      # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': '',      # Set to empty string for localhost.  Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
+
+    # sqlite3 version
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',#'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or
+    #                                         #'oracle'.
+    #    'NAME':'./mis.db',                      # Or path to database file if using sqlite3.
+    #    'USER': '',                      # Not used with sqlite3.
+    #    'PASSWORD': '',                  # Not used with sqlite3.
+    #    'HOST': '',      # Set to empty string for localhost.  Not used with sqlite3.
+    #    'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    #}
 }
 
-# Local time zone for this installation. Choices can be found here:
+# Local time zone for this installation.  Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # On Unix systems, a value of None will cause Django to use the same
@@ -30,7 +43,7 @@ DATABASES = {
 # system time zone.
 TIME_ZONE = 'America/Chicago'
 
-# Language code for this installation. All choices can be found here:
+# Language code for this installation.  All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
@@ -51,7 +64,7 @@ USE_TZ = True
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = ''
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# URL that handles the media served from MEDIA_ROOT.  Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = ''
@@ -75,8 +88,7 @@ STATICFILES_DIRS = (
 
 # List of finder classes that know how to find static files in
 # various locations.
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
+STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
@@ -85,14 +97,12 @@ STATICFILES_FINDERS = (
 SECRET_KEY = 'n(bd1f1c%e8=_xad02x5qtfn%wgwpi492e$8_erx+d)!tpeoim'
 
 # List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
+TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
+MIDDLEWARE_CLASSES = ('django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -107,15 +117,15 @@ ROOT_URLCONF = 'moonbuck.urls'
 WSGI_APPLICATION = 'moonbuck.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Put strings here, like "/home/html/django_templates" or
+    # "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
 
 #import
-from mis.models import *
-INSTALLED_APPS = (
-    'django.contrib.auth',
+#from mis.models import *
+INSTALLED_APPS = ('django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
@@ -130,7 +140,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
-# A sample logging configuration. The only tangible logging
+# A sample logging configuration.  The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
 # See http://docs.djangoproject.com/en/dev/topics/logging for

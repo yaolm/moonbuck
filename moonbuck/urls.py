@@ -1,10 +1,9 @@
 from django.conf.urls import patterns, include, url
-from mis import views
+from .mis import views
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
-
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'moonbuck.views.home', name='home'),
@@ -15,6 +14,12 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+<<<<<<< HEAD
     ('^index/$',views.homepage),
     ('^crm/$',views.crmHome),
 )
+=======
+    url(r'^$', views.homepage,),
+    #url('^index/$',views.homepage),
+    )
+>>>>>>> 45ec33a541ed8455d0361b7bb975baefe2f47d6b
