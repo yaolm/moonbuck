@@ -85,6 +85,7 @@ def crm_user_searchresult(request):
             return HttpResponse("something to response")
 
 def favor(request):
+    record=good.objects.all()
     return render_to_response('credit.html',locals())
 
 #√
