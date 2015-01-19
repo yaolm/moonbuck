@@ -14,3 +14,7 @@ def homepage(request):
 
 def crmHome(request):
     return render_to_response('CRM首页.html',locals())
+
+def prmHome(request):
+    return render_to_response('PRM首页.html',locals())
+
