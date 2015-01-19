@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
-from .mis import views
+from moonbuck.mis import views
+from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -14,9 +15,12 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve',{ 'document_root':settings.STATIC_ROOT }),
+    
     ('^index/$',views.homepage),
     ('^crm/$',views.crmHome),
     ('^prm/$',views.prmHome),
+    ('^crm/search/$',views.crm_user_search),
+    ('^crm/search/result/$',views.crm_user_searchresult),
 
 )
