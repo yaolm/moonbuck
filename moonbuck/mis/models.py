@@ -74,7 +74,7 @@ class customerGroup(models.Model):
 
 class media(models.Model):
     meId = models.IntegerField(max_length=10,null=False)
-    meTo = models.ForeignKey(customerGroup)
+    meTo = models.CharField(max_length=10,null=True)
     meEffe = models.IntegerField(max_length=10,null=True)
     
     def __unicode__(self):
