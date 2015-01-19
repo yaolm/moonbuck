@@ -10,6 +10,7 @@ import datetime
 from mis.models import *
 
 def homepage(request):
-    pagetitle="Home"
-    content=""
-    return render_to_response('base.html',locals())
+    return render_to_response('index.html',locals())
+
+def crmHome(request):
+    return render_to_response('CRM首页.html',locals())
