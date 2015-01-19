@@ -56,3 +56,23 @@ def crm_user_searchresult(request):
             return render_to_response('CRM查询结果.html',locals())
         else:
             return render_to_response('CRM检索页面.html',locals())
+
+def favor(request):
+    return render_to_response('credit.html',locals())
+
+def crmproject(request):
+    return render_to_response('CRM优惠项目进程.html',locals())
+
+def crmaddproject(request):
+    return render_to_response('add_benefit_item.html',locals())
+def crmprojectdetail(request):
+    #需要按照优惠的类型返回不同的页面，这里只是为了先把函数定义了
+    return render_to_response('youhuizhengce_jifenduihuan.html',locals())
+
+
+def prmproject(request):
+    return render_to_response('PRM项目进程.html',locals())
+def additem(request):
+    return render_to_response('add_public_item.html',locals())
+def addmedia(request):
+    return render_to_response('add_public_relation.html',locals())
