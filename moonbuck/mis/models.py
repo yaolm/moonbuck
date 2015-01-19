@@ -1,7 +1,7 @@
 # -*- coding:utf8 -*-
 
 from django.db import models
-#import MySQLdb as mysqldb
+import MySQLdb as mysqldb
 
 # Create your models here.
 class customer(models.Model):
