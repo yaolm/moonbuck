@@ -70,6 +70,7 @@ def favor(request):
     return render_to_response('credit.html',locals())
 
 def crmproject(request):
+    record=project.objects.all()
     return render_to_response('CRM优惠项目进程.html',locals())
 
 def crmaddproject(request):
