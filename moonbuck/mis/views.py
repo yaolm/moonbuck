@@ -15,6 +15,19 @@ def homepage(request):
 def crmHome(request):
     return render_to_response('CRM首页.html',locals())
 
+def crmSearch(request):
+    return render_to_response('CRM检索页面.html',locals())
+
+def crmSearchResult(request):
+    if request.method == 'GET':
+        query = request.GET
+        pass
+    elif request.method =='POST':
+        query = request.POST
+        pass
+    else:
+        return render_to_response('CRM查询结果.html',locals())
+
 def prmHome(request):
     return render_to_response('PRM首页.html',locals())
 
