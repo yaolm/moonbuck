@@ -86,7 +86,7 @@ CREATE TABLE `auth_permission` (
   UNIQUE KEY `content_type_id` (`content_type_id`,`codename`),
   KEY `auth_permission_417f1b1c` (`content_type_id`),
   CONSTRAINT `auth_permissi_content_type_id_51277a81_fk_django_content_type_id` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `auth_permission` (
 
 LOCK TABLES `auth_permission` WRITE;
 /*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
-INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(10,'Can add content type',4,'add_contenttype'),(11,'Can change content type',4,'change_contenttype'),(12,'Can delete content type',4,'delete_contenttype'),(13,'Can add session',5,'add_session'),(14,'Can change session',5,'change_session'),(15,'Can delete session',5,'delete_session'),(16,'Can add site',6,'add_site'),(17,'Can change site',6,'change_site'),(18,'Can delete site',6,'delete_site'),(19,'Can add customer',7,'add_customer'),(20,'Can change customer',7,'change_customer'),(21,'Can delete customer',7,'delete_customer'),(22,'Can add piece',8,'add_piece'),(23,'Can change piece',8,'change_piece'),(24,'Can delete piece',8,'delete_piece'),(25,'Can add order',9,'add_order'),(26,'Can change order',9,'change_order'),(27,'Can delete order',9,'delete_order'),(28,'Can add order piece',10,'add_orderpiece'),(29,'Can change order piece',10,'change_orderpiece'),(30,'Can delete order piece',10,'delete_orderpiece'),(31,'Can add project',11,'add_project'),(32,'Can change project',11,'change_project'),(33,'Can delete project',11,'delete_project'),(34,'Can add customer group',12,'add_customergroup'),(35,'Can change customer group',12,'change_customergroup'),(36,'Can delete customer group',12,'delete_customergroup'),(37,'Can add media',13,'add_media'),(38,'Can change media',13,'change_media'),(39,'Can delete media',13,'delete_media'),(40,'Can add price',14,'add_price'),(41,'Can change price',14,'change_price'),(42,'Can delete price',14,'delete_price'),(43,'Can add order media',15,'add_ordermedia'),(44,'Can change order media',15,'change_ordermedia'),(45,'Can delete order media',15,'delete_ordermedia');
+INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(10,'Can add content type',4,'add_contenttype'),(11,'Can change content type',4,'change_contenttype'),(12,'Can delete content type',4,'delete_contenttype'),(13,'Can add session',5,'add_session'),(14,'Can change session',5,'change_session'),(15,'Can delete session',5,'delete_session'),(16,'Can add site',6,'add_site'),(17,'Can change site',6,'change_site'),(18,'Can delete site',6,'delete_site'),(19,'Can add customer',7,'add_customer'),(20,'Can change customer',7,'change_customer'),(21,'Can delete customer',7,'delete_customer'),(22,'Can add piece',8,'add_piece'),(23,'Can change piece',8,'change_piece'),(24,'Can delete piece',8,'delete_piece'),(25,'Can add order',9,'add_order'),(26,'Can change order',9,'change_order'),(27,'Can delete order',9,'delete_order'),(28,'Can add order piece',10,'add_orderpiece'),(29,'Can change order piece',10,'change_orderpiece'),(30,'Can delete order piece',10,'delete_orderpiece'),(31,'Can add project',11,'add_project'),(32,'Can change project',11,'change_project'),(33,'Can delete project',11,'delete_project'),(34,'Can add customer group',12,'add_customergroup'),(35,'Can change customer group',12,'change_customergroup'),(36,'Can delete customer group',12,'delete_customergroup'),(37,'Can add media',13,'add_media'),(38,'Can change media',13,'change_media'),(39,'Can delete media',13,'delete_media'),(40,'Can add price',14,'add_price'),(41,'Can change price',14,'change_price'),(42,'Can delete price',14,'delete_price'),(43,'Can add order media',15,'add_ordermedia'),(44,'Can change order media',15,'change_ordermedia'),(45,'Can delete order media',15,'delete_ordermedia'),(46,'Can add good',16,'add_good'),(47,'Can change good',16,'change_good'),(48,'Can delete good',16,'delete_good');
 /*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -205,7 +205,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `django_content_type_app_label_3ec8c61c_uniq` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -214,7 +214,7 @@ CREATE TABLE `django_content_type` (
 
 LOCK TABLES `django_content_type` WRITE;
 /*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
-INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(4,'content type','contenttypes','contenttype'),(5,'session','sessions','session'),(6,'site','sites','site'),(7,'customer','mis','customer'),(8,'piece','mis','piece'),(9,'order','mis','order'),(10,'order piece','mis','orderpiece'),(11,'project','mis','project'),(12,'customer group','mis','customergroup'),(13,'media','mis','media'),(14,'price','mis','price'),(15,'order media','mis','ordermedia');
+INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(4,'content type','contenttypes','contenttype'),(5,'session','sessions','session'),(6,'site','sites','site'),(7,'customer','mis','customer'),(8,'piece','mis','piece'),(9,'order','mis','order'),(10,'order piece','mis','orderpiece'),(11,'project','mis','project'),(12,'customer group','mis','customergroup'),(13,'media','mis','media'),(14,'price','mis','price'),(15,'order media','mis','ordermedia'),(16,'good','mis','good');
 /*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -354,6 +354,31 @@ INSERT INTO `mis_customergroup` VALUES (1,101,NULL),(2,102,NULL),(3,103,NULL),(4
 UNLOCK TABLES;
 
 --
+-- Table structure for table `mis_good`
+--
+
+DROP TABLE IF EXISTS `mis_good`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mis_good` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `goId` int(11) NOT NULL,
+  `goName` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mis_good`
+--
+
+LOCK TABLES `mis_good` WRITE;
+/*!40000 ALTER TABLE `mis_good` DISABLE KEYS */;
+INSERT INTO `mis_good` VALUES (1,1,'蓝山'),(2,2,'卡布基诺'),(3,3,'拿铁'),(4,4,'摩卡'),(5,5,'美式'),(6,6,'法式'),(7,7,'爱尔兰'),(8,8,'皇家');
+/*!40000 ALTER TABLE `mis_good` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `mis_media`
 --
 
@@ -421,12 +446,12 @@ CREATE TABLE `mis_ordermedia` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `omId` int(11) NOT NULL,
   `omTi` time NOT NULL,
-  `omMe_id` int(11) NOT NULL,
-  `omSer_id` int(11) NOT NULL,
+  `omMe` int(11) DEFAULT NULL,
+  `omSer` int(11) DEFAULT NULL,
   `omPr` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `mis_ordermedia_ee2aa2fc` (`omMe_id`),
-  KEY `mis_ordermedia_e3ed39c9` (`omSer_id`)
+  KEY `mis_ordermedia_ee2aa2fc` (`omMe`),
+  KEY `mis_ordermedia_e3ed39c9` (`omSer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -569,4 +594,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-20  6:03:34
+-- Dump completed on 2015-01-20  7:50:47
