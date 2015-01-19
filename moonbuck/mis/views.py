@@ -117,11 +117,14 @@ def crmprojectdetail(request):
 
     return render_to_response('add_benefit_item.html',locals())
 
+#√
 def prmproject(request):
     record=orderMedia.objects.all()
     return render_to_response('已有公关媒体信息.html',locals())
+#入口存疑
 def prmprojectdetail(request):
     return render_to_response('PRM项目进程.html',locals())
+#
 def additem(request):
     return render_to_response('add_public_item.html',locals())
 def addmedia(request):
