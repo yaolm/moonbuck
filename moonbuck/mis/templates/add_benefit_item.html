@@ -2,9 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    	<link href="css/metro-bootstrap.css" rel="stylesheet" />
 
+<link href="css/metro-bootstrap.css" rel="stylesheet" />
     	<link href="css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="css/iconFont.css" rel="stylesheet">
     	<script src="js/jquery.min.js"></script>
@@ -12,11 +11,9 @@
     	<script src="js/metro.min.js"></script>
     	<link href="css/mystyle.css" rel="stylesheet" />
         <link rel="icon" href="image/logo.jpg" />
-
-<title>add_customer</title>
-
+        
+<title>add_benefit_item</title>
 </head>
-
 
  <body class="metro">
         <div class="container">
@@ -128,7 +125,6 @@
                     </div>
                 </div>
             </nav>
-
 <div id="sidebar">
          <div class="sidebar_box"><span class="bottom"></span>
             	<h3>Categories</h3>   
@@ -150,48 +146,108 @@
                 </div>
             </div>
          </div>
-         
+
+
+
+
 <div class="biaodan">
            
-<h2 align="center";>用户信息</h2>
+<h2 align="center">优惠项目设置</h2>
 <form action="#">
 
-       用户卡号：<input id="userno"  title="Userno"   name="userno" value="请输入用户卡号" type="text" />
-      用户姓名：<input id="username"  title="Username" maxlength="50"  name="username" value="请输入用户姓名" type="text" />
-       <p>电子邮箱：<input id="email"  title="email" name="email" value="请输入邮箱" type="email" />
-        手机号码：<input id="mob_num"  title="mob_num" maxlength="13"  name="mob_num" value="请输入手机号" type="phone" /></p>
-         
-        <p>
-        生日：<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
-            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="input" type="text" />月
-            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="text" />日</p>
+       
             
-         <p> 地址：<input style="width:600px;" id=""  title=""   name="" value="请输入居住地址" type="text" /></p>
+                <div class="content_selectbutton1">
+                <h3>参与人群</h3>
+                <form>
+                   选项: <select id="participant" name="participant">
+                        <option value="1"  selected="selected">请选择</option>
+                        <option value="2">偏好</option>
+                        <option value="3">单位协议</option>
+                        <option value="4">性别</option>
+                        <option value="5">年龄</option>
+                        <option value="6">用户分级类型</option>
+                        <option value="7">支付渠道</option>
+                        <option value="8">用户身份</option>
+                        <option value="9">用户生日</option>
+                    </select>
+                    输入：<input type="text" name="textcontent" />
+                    <select><option value="1">AND</option>
+                    <option value="2">OR</option></select></br>
+                    选项:<select id="participant" name="participant">
+                    <option value="1"  selected="selected">请选择</option>
+                        <option value="2">偏好</option>
+                        <option value="3">单位协议</option>
+                        <option value="4">性别</option>
+                        <option value="5">年龄</option>
+                        <option value="6">用户分级类型</option>
+                        <option value="7">支付渠道</option>
+                        <option value="8">用户身份</option>
+                        <option value="9">用户生日</option>
+                       <!-- <option value="1"  selected="selected">请选择</option>
+                        <option value="2">用户名</option>
+                        <option value="3">邮箱</option>
+                        <option value="4">积分</option>
+                        <option value="5">累计消费额</option>
+                        <option value="6">人群类型</option>
+                        <option value="7">消费卡号</option>-->
+                    </select>
+                    输入：<input type="text" name="textcontent" />
+                    <select><option value="1">AND</option>
+                    <option value="2">OR</option></select><!--<input style="float:right;width:100px;height:60px;" type="submit" value="确定">--><br>
+                    选项:<select id="participant" name="participant">
+                        <option value="1"  selected="selected">请选择</option>
+                        <option value="2">偏好</option>
+                        <option value="3">单位协议</option>
+                        <option value="4">性别</option>
+                        <option value="5">年龄</option>
+                        <option value="6">用户分级类型</option>
+                        <option value="7">支付渠道</option>
+                        <option value="8">用户身份</option>
+                        <option value="9">用户生日</option>
+                    </select>
+                    输入：<input type="text" name="textcontent" />
+                    <select><option value="1">AND</option>
+                    <option value="2">OR</option></select><br>
+                   
+                    </form>
+                 </div>
+                 
          
+          <div class="content_selectbutton1">
+           <h3>活动时间</h3>
            <p>
-           创建日期<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
+            始于<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
             <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="input" type="text" />月
             <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="text" />日</p>
-           
-          积分：<input id=""  title=""   name="" value="现有积分" type="text" />
-         累计消费额：<input id=""  title=""   name="" value="" type="text" />
-        总利润：<input id=""  title=""   name="" value="" type="text" />
-         
-         <p>用户等级：<select style="width:200px;height:30px;margin:10px 10px;" id="my-dropdown" name="my-dropdown" >
+          <p>
+            终于<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
+            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="input" type="text" />月
+            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="text" />日</p>
+          </div>
+          <div class="content_selectbutton1">
+          <h3>优惠政策</h3>
+          选项:<select style="width:200px;margin:10px 5px;" id="items" name="items">
                         <option value="1"  selected="selected">请选择</option>
-                        <option value="2">黄金用户</option>
-                        <option value="3">钢铁用户</option>
-                        <option value="4">重铅用户</option>
-                         <option value="5">铂金用户</option>
+                        <option value="2">买就送</option>
+                        <option value="3">满就送</option>
+                        <option value="4">特价商品</option>
+                        <option value="5">满就减</option>
+                        <option value="6">积分兑换</option>
+                        <option value="7">新品尝鲜价</option>
                     </select>
-</form>
+                     <input style="float:right;width:100px;height:30px;" type="submit" value="详细设置">
+          </div>
+         
+       </br></br></br> <!-- 买M送N商品活动价买X送满X送办卡充值 送满立减；积分兑换金钱折扣（即不换钱，换减价）/物品新品尝鲜（试用装）-->
 
- <p align="center";> <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" /> <input style="margin:10px 40px" id="submit" value="删除用户" type="submit" /> </p>
+ <p align="center";> <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" /> <input style="margin:10px 40px" id="submit" value="删除项目" type="submit" /> </p>
         
    </br></br></br></br></br>
     </div>
-    
-    <nav class="navigation-bar fixed-bottom light">
+
+
+	  <nav class="navigation-bar fixed-bottom light">
                 <nav class="navigation-bar-content">
                     <div class="element place-right">
                         <ul class="element-menu drop-up">
@@ -218,7 +274,6 @@
                     </div>
                 </nav>
             </nav>
-
             
 </body>
 </html>
