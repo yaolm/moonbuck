@@ -17,4 +17,6 @@ urlpatterns = patterns('',
 
     ('^index/$',views.homepage),
     ('^crm/$',views.crmHome),
+    ('^prm/$',views.prmHome),
+
 )
