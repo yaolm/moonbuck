@@ -81,6 +81,9 @@ def crm_user_searchresult(request):
                 record = customer.objects.filter(cuType=t1)
             elif p1 == '7':
                 record = customer.objects.filter(cuId=int(t1))
+            # 这里还没处理return的页面
+            return HttpResponse("something to response")
+
 def favor(request):
     return render_to_response('credit.html',locals())
 
