@@ -2,7 +2,9 @@
 <html>
 	<head>
    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     	 <link href="/static/css/metro-bootstrap.css" rel="stylesheet" />
+
         <link href="/static/css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="/static/css/iconFont.css" rel="stylesheet">
         <script src="/static/js/jquery.min.js"></script>
@@ -36,8 +38,10 @@
                             <li><a href="#">商品清单</a></li>
                             <li><a href="#">供应商管理</a></li>
                             <li><a href="#">采购提醒</a></li>
+
                             <li><a href="#">警告设置</a></li>
                             
+
                         </ul>
                     </div>
                     <div class="element">
@@ -46,7 +50,7 @@
                             <li><a href="#">商品统计</a></li>
                             <li><a href="#">店面任务</a></li>
                             <li><a href="#">绩效</a></li>
-                            
+
                         </ul>
                     </div>
                     <div class="element">
@@ -56,8 +60,10 @@
                             <li><a href="#">仓库分布</a></li>
                             <li><a href="#">供给情况</a></li>
                             <li><a href="#">关系变更</a></li>
+
                             <li><a href="#">库存警告</a></li>
                             
+
                         </ul>
                     </div>
                     <div class="element">
@@ -66,8 +72,10 @@
                             <li><a href="#">报表查看</a></li>
                             <li><a href="#">资金管理</a></li>
                             <li><a href="#">银行关系</a></li>
+
                             <li><a href="#">经销商情况</a></li>
                            
+
                         </ul>
                     </div>
                     <div class="element">
@@ -75,6 +83,7 @@
                         <ul class="dropdown-menu" data-role="dropdown">
                             <li><a href="#">用户管理</a></li>
                             <li><a href="#">制度设置</a></li>
+
                             <li><a href="#">优惠管理</a></li>
                            
                         </ul>
@@ -84,16 +93,19 @@
                         <ul class="dropdown-menu" data-role="dropdown">
                             <li><a href="#">公共项目管理</a></li>
                             <li><a href="#">公共媒体管理</a></li>
+
                            
                         </ul>
                     </div>
                     <div class="element">
-                        <a href="#" class="dropdown-toggle">知识管理</a>
+                        <a href="#" class="dropdown-toggle">公共关系管理</a>
                         <ul class="dropdown-menu" data-role="dropdown">
+
                             <li><a href="#">统计情况</a></li>
                             <li><a href="#">分类管理</a></li>
                             <li><a href="#">文章权限</a></li>
                             
+
                         </ul>
                     </div>
                     <div class="element">
@@ -101,7 +113,7 @@
                         <ul class="dropdown-menu" data-role="dropdown">
                             <li><a href="#">人员管理</a></li>
                             <li><a href="#">店面管理</a></li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -112,8 +124,10 @@
             	<h3>Categories</h3>   
                 <div class="content"> 
                 	<ul class="sidebar_list">
+
                     	<li class="first"><a href="#">CRM首页</a></li>
                        
+
                         <li><a href="#">用户管理</a></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;用户查询</a></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;添加用户</a></li>
@@ -139,13 +153,15 @@
                         <th>参与人数</th>
                      </thead>
                      <tbody id="highlight">
+{% for rec in record %}
                         <tr>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
+                           <td>{{rec.poCu}}</td>
+                           <td>{{rec.poBemonth}} 月{{rec.poBeday}}日 {{rec.poBegin}}</td>
+                           <td>{{rec.poEnmonth}} 月{{rec.poEnday}}日 {{rec.poEnd}}</td>
+                           <td>{{rec.poType}}</td>
                            <td></td>
                         </tr>
+{% endfor %}
                      </tbody>                                                
                 </table>
             </div>

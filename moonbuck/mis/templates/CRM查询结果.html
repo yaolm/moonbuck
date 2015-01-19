@@ -2,6 +2,7 @@
 <html>
 	<head>
    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     	 <link href="/static/css/metro-bootstrap.css" rel="stylesheet" />
         <link href="/static/css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="/static/css/iconFont.css" rel="stylesheet">
@@ -13,6 +14,7 @@
 
 
         <title>crm_retrival_result</title>
+
     	<style></style>
     
 	</head>
@@ -142,15 +144,17 @@
                         <th>累计消费额</th>
                      </thead>
                      <tbody id="highlight">
+{% for rec in record %}
                         <tr>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
+                           <td>{{rec.cuId}}</td>
+                           <td>{{rec.cuName}}</td>
+                           <td>{{rec.cuEmail}}</td>
+                           <td>{{rec.cuPhone}}</td>
+                           <td>{{rec.cuScore}}</td>
+                           <td>{{rec.cuType}}</td>
+                           <td>{{cuSum}}</td>
                         </tr>
+{% endfor %}
                      </tbody>                                                
                 </table>
             </div>
