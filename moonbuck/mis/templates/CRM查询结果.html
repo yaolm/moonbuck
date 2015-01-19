@@ -149,15 +149,17 @@
                         <th>累计消费额</th>
                      </thead>
                      <tbody id="highlight">
+{% for rec in record %}
                         <tr>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
+                           <td>{{rec.cuId}}</td>
+                           <td>{{rec.cuName}}</td>
+                           <td>{{rec.cuEmail}}</td>
+                           <td>{{rec.cuPhone}}</td>
+                           <td>{{rec.cuScore}}</td>
+                           <td>{{rec.cuType}}</td>
+                           <td>{{cuSum}}</td>
                         </tr>
+{% endfor %}
                      </tbody>                                                
                 </table>
             </div>
