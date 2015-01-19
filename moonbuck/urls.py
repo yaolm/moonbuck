@@ -1,3 +1,5 @@
+# -*- coding:utf8 -*-
+
 from django.conf.urls import patterns, include, url
 from moonbuck.mis import views
 from django.conf import settings
@@ -20,10 +22,27 @@ urlpatterns = patterns('',
     ('^index/$',views.homepage),
     ('^crm/$',views.crmHome),
     ('^prm/$',views.prmHome),
-    ('^crm/adduser/$',views.crm_adduser),
+
+    #下面是crm的三个主要功能
+
+    #1积分制度等设置
+    ('^crm/favor/$',views.favor),
+    
+    #2CRM查询的两个页面
     ('^crm/search/$',views.crm_user_search),
     ('^crm/search/result/$',views.crm_user_searchresult),
+    #2增加用户，用户管理
     ('^crm/add/$',views.crm_adduser),
-    ('')
+    #3优惠项目列出来
+    ('^crm/project/$',views.crmproject),
+    ('^crm/project/add/$',views.crmaddproject),
+    #3具体优惠政策
+    ('^crm/project/detail/(\d{1})/$',views.crmprojectdetail),
+
+
+    #下面是PRM
+    ('^prm/project/$',views.prmproject),
+    ('^prm/add/item/$',views.additem),
+    ('^prm/add/media/$',views.addmedia),
 
 )
