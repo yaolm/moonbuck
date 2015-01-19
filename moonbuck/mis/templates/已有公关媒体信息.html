@@ -135,7 +135,6 @@
 					<thead>
                	        <th>媒体名称</th>
                         <th>媒体类型</th>
-                        <th>影响指数</th>
                         <th>受众类型</th>
                         <th>服务价位</th>
                         
@@ -143,12 +142,12 @@
                      <tbody id="highlight">
 {% for rec in record %}
                         <tr>
-                           <td>rec.</td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td></td>
+                           <td>{{rec.omId}}</td>
+                           <td>{{rec.omMe}}</td>
+                           <td>{{rec.omSer}}</td>
+                           <td>{{rec.omPr}}</td>
                         </tr>
+{% endfor %}
                      </tbody>                                                
                 </table>
             </div>
