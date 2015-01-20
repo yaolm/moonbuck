@@ -129,87 +129,89 @@
         </div>
         <!------------------------------------------------------------------->
         <div id="content_result">
-            <div id="lebel_content">
-                <h2 align="center" ;>积分制度管理</h2><br />
-                <p>请勾选购买后可兑换积分的商品</p>
-                <table class="hovered">
-                    {% for rec in record %}
-                    <tr>
-                        <td><form><input type="checkbox" name={{rec.goId}} />{{rec.goName}}</form></td>
-                    </tr>
-                    {% endfor %}
-                </table>
-                <br /><p>
-                    以上产品每消费
-                    <input type="number" name="jiage" /> 元获取 <input type="number" name="jifen" /> 积分
+            <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                <div id="lebel_content">
+                    <h2 align="center" ;>积分制度管理</h2><br />
+                    <p>请勾选购买后可兑换积分的商品</p>
+                    <table class="hovered">
+                        {% for rec in record %}
+                        <tr>
+                            <td><input type="checkbox" name={{rec.goId}} />{{rec.goName}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <br /><p>
+                        以上产品每消费
+                        <input type="number" name="jiage" /> 元获取 <input type="number" name="jifen" /> 积分
+                        <input style="margin:10px 40px" id="submit" value="确认保存" type="submit" />
+                    </p>
+                </div>
+                <div id="lebel_content2">
+                    <h2 align="center" ;>等级制度管理</h2><br />
+                    <p>
+                        <input type="number" name="quanzhi" value="请输入权值" /> × <select id="jiaquan1" name="jiaquan1">
+                            <option value="1" selected="selected">请选择</option>
+                            <option value="2">消费额总量</option>
+                            <option value="3">毛利润总量</option>
+                            <option value="4">反比例</option>
+                            <option value="5">单参数</option>
+                            <option value="6">根据时间加权的毛利润</option>
+                        </select>
+                        +
+                        <input type="number" name="quanzhi" value="请输入权值" /> ×
+                        <select id="jiaquan2" name="jiaquan2">
+                            <option value="1" selected="selected">请选择</option>
+                            <option value="2">消费额总量</option>
+                            <option value="3">毛利润总量</option>
+                            <option value="4">反比例</option>
+                            <option value="5">单参数</option>
+                            <option value="6">根据时间加权的毛利润</option>
+                        </select>
+                        +
+                        <br />
+                        <input type="number" name="quanzhi" value="请输入权值" /> ×
+                        <select id="jiaquan3" name="jiaquan3">
+                            <option value="1" selected="selected">请选择</option>
+                            <option value="2">消费额总量</option>
+                            <option value="3">毛利润总量</option>
+                            <option value="4">反比例</option>
+                            <option value="5">单参数</option>
+                            <option value="6">根据时间加权的毛利润</option>
+                        </select>
+                        +
+                        <input type="number" name="quanzhi" value="请输入权值" /> ×
+                        <select id="jiaquan4" name="jiaquan4">
+                            <option value="1" selected="selected">请选择</option>
+                            <option value="2">消费额总量</option>
+                            <option value="3">毛利润总量</option>
+                            <option value="4">反比例</option>
+                            <option value="5">单参数</option>
+                            <option value="6">根据时间加权的毛利润</option>
+                        </select>
+                        +
+                        <br />
+                        <input type="number" name="quanzhi" value="请输入权值" /> ×
+                        <select id="jiaquan5" name="jiaquan5">
+                            <option value="1" selected="selected">请选择</option>
+                            <option value="2">消费额总量</option>
+                            <option value="3">毛利润总量</option>
+                            <option value="4">反比例</option>
+                            <option value="5">单参数</option>
+                            <option value="6">根据时间加权的毛利润</option>
+                        </select> = 评级总分
+                    </p>
+
+                    <br /><p>
+                        总分前
+                        <input type="number" name="bili" /> %为铂金用户
+                    </p>
+                    <p>总分前 <input type="number" name="bili" value="已考虑之前比例" /> %为黄金用户</p>
+                    <p>总分前 <input type="number" name="bili" value="已考虑之前比例" /> %为钢铁用户</p>
+                    <p>总分前 <input type="number" name="bili" value="已考虑之前比例" /> %重铅金用户</p>
                     <input style="margin:10px 40px" id="submit" value="确认保存" type="submit" />
-                </p>
-
-            </div>
-            <div id="lebel_content2">
-                <h2 align="center" ;>等级制度管理</h2><br />
-                <p>
-                    <input type="number" name="quanzhi" value="请输入权值" /> × <select id="jiaquan1" name="jiaquan1">
-                        <option value="1" selected="selected">请选择</option>
-                        <option value="2">消费额总量</option>
-                        <option value="3">毛利润总量</option>
-                        <option value="4">反比例</option>
-                        <option value="5">单参数</option>
-                        <option value="6">根据时间加权的毛利润</option>
-                    </select>
-                    +
-                    <input type="number" name="quanzhi" value="请输入权值" /> ×
-                    <select id="jiaquan2" name="jiaquan2">
-                        <option value="1" selected="selected">请选择</option>
-                        <option value="2">消费额总量</option>
-                        <option value="3">毛利润总量</option>
-                        <option value="4">反比例</option>
-                        <option value="5">单参数</option>
-                        <option value="6">根据时间加权的毛利润</option>
-                    </select>
-                    +
-                    <br />
-                    <input type="number" name="quanzhi" value="请输入权值" /> ×
-                    <select id="jiaquan3" name="jiaquan3">
-                        <option value="1" selected="selected">请选择</option>
-                        <option value="2">消费额总量</option>
-                        <option value="3">毛利润总量</option>
-                        <option value="4">反比例</option>
-                        <option value="5">单参数</option>
-                        <option value="6">根据时间加权的毛利润</option>
-                    </select>
-                    +
-                    <input type="number" name="quanzhi" value="请输入权值" /> ×
-                    <select id="jiaquan4" name="jiaquan4">
-                        <option value="1" selected="selected">请选择</option>
-                        <option value="2">消费额总量</option>
-                        <option value="3">毛利润总量</option>
-                        <option value="4">反比例</option>
-                        <option value="5">单参数</option>
-                        <option value="6">根据时间加权的毛利润</option>
-                    </select>
-                    +
-                    <br />
-                    <input type="number" name="quanzhi" value="请输入权值" /> ×
-                    <select id="jiaquan5" name="jiaquan5">
-                        <option value="1" selected="selected">请选择</option>
-                        <option value="2">消费额总量</option>
-                        <option value="3">毛利润总量</option>
-                        <option value="4">反比例</option>
-                        <option value="5">单参数</option>
-                        <option value="6">根据时间加权的毛利润</option>
-                    </select> = 评级总分
-                </p>
-
-                <br /><p>
-                    总分前
-                    <input type="number" name="bili" /> %为铂金用户
-                </p>
-                <p>总分前 <input type="number" name="bili" value="已考虑之前比例" /> %为黄金用户</p>
-                <p>总分前 <input type="number" name="bili" value="已考虑之前比例" /> %为钢铁用户</p>
-                <p>总分前 <input type="number" name="bili" value="已考虑之前比例" /> %重铅金用户</p>
-                <input style="margin:10px 40px" id="submit" value="确认保存" type="submit" /><br /><br /><br /><br />
-            </div>
+                </div>
+                <br /><br /><br /><br />
+            </form>
         </div>
         <!------------------------------------------------------------------->
         <nav class="navigation-bar fixed-bottom light">

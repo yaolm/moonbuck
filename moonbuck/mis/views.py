@@ -113,8 +113,15 @@ def crm_user_searchresult(request):
 
 #这里有数据库增加，把商品进行了更新，还没有写积分计算方法的提交
 def favor(request):
-    record = good.objects.all()
-    return render_to_response('credit.html',locals())
+    if request.method == 'GET':
+        record = good.objects.all()
+        template = loader.get_template('credit.html')
+        context = RequestContext(request, {'record':record})
+        return HttpResponse(template.render(context))
+    elif request.method == 'POST':
+        pass
+    else:
+        return render_to_response('creadit.html',locals())
 
 #√
 def crmproject(request):
