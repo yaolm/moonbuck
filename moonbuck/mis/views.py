@@ -21,21 +21,22 @@ def prmHome(request):
     return render_to_response('PRM首页.html',locals())
 
 @csrf_exempt
+#这里还是有问题，跳不过去，ＴＡＴ
 def crm_adduser(request):
     errors = []
     if request.method == 'POST':
         if not errors:
-            userno = request.GET['userno']
-            username = request.GET['username']
-            email = request.GET['email']
-            mob_num = request.GET['mob_num']
-            birthyear = request.GET['birthyear']
-            birthmonth = request.GET['birthmonth']
-            birthday = request.GET['birthday']
-            address = request.GET['address']
-            cryear = request.GET['cryear']
-            crmonth = request.GET['crmonth']
-            crday = request.GET['crday']
+            userno = request.POST['userno']
+            username = request.POST['username']
+            email = request.POST['email']
+            mob_num = request.POST['mob_num']
+            birthyear = request.POST['birthyear']
+            birthmonth = request.POST['birthmonth']
+            birthday = request.POST['birthday']
+            address = request.POST['address']
+            cryear = request.POST['cryear']
+            crmonth = request.POST['crmonth']
+            crday = request.POST['crday']
 
             temp = customer(cuId=userno,cuName=username,cuEmail=email,cuPhone=mob_num,cuCreate=crday)
             temp.save()
@@ -84,6 +85,7 @@ def crm_user_searchresult(request):
             # 这里还没处理return的页面
             return HttpResponse("something to response")
 
+#这里有数据库增加，把商品进行了更新，还没有写积分计算方法的提交
 def favor(request):
     record=good.objects.all()
     return render_to_response('credit.html',locals())
@@ -96,7 +98,7 @@ def crmproject(request):
 def crmaddproject(request):
     return render_to_response('add_benefit_item.html',locals())
 def crmprojectdetail(request):
-    #需要按照优惠的类型返回不同的页面，这里只是为了先把函数定义了
+    #需要按照优惠的类型返回不同的页面，
     if request.method == "POST":
         q=request.POST
         items=q['items'][0]
