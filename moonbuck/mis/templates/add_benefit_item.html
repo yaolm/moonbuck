@@ -130,10 +130,10 @@
         <div class="biaodan">
 
             <h2 align="center">优惠项目设置</h2>
-            <form action="#">
+            <form action="" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="content_selectbutton1">
                     <h3>参与人群</h3>
-                    选项: <select id="participant" name="participant">
+                    选项: <select id="participant1" name="participant1">
                         <option value="1" selected="selected">请选择</option>
                         <option value="2">偏好</option>
                         <option value="3">单位协议</option>
@@ -144,12 +144,12 @@
                         <option value="8">用户身份</option>
                         <option value="9">用户生日</option>
                     </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select>
+                    输入：<input type="text" name="textcontent1" />
+                    <select name="option1">
                         <option value="1">AND</option>
                         <option value="2">OR</option>
                     </select><br />
-                    选项:<select id="participant" name="participant">
+                    选项:<select id="participant2" name="participant2">
                         <option value="1" selected="selected">请选择</option>
                         <option value="2">偏好</option>
                         <option value="3">单位协议</option>
@@ -167,12 +167,12 @@
                         <option value="6">人群类型</option>
                         <option value="7">消费卡号</option>-->
                     </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select>
+                    输入：<input type="text" name="textcontent2" />
+                    <select name="option2">
                         <option value="1">AND</option>
                         <option value="2">OR</option>
                     </select><!--<input style="float:right;width:100px;height:60px;" type="submit" value="确定">--><br />
-                    选项:<select id="participant" name="participant">
+                    选项:<select id="participant" name="participant3">
                         <option value="1" selected="selected">请选择</option>
                         <option value="2">偏好</option>
                         <option value="3">单位协议</option>
@@ -183,8 +183,8 @@
                         <option value="8">用户身份</option>
                         <option value="9">用户生日</option>
                     </select>
-                    输入：<input type="text" name="textcontent" />
-                    <select>
+                    输入：<input type="text" name="textcontent3" />
+                    <select name="option3">
                         <option value="1">AND</option>
                         <option value="2">OR</option>
                     </select><br />
@@ -192,19 +192,19 @@
                 <div class="content_selectbutton1">
                     <h3>活动时间</h3>
                     <p>
-                        始于<input style="margin:10px 0;" id="" title="" maxlength="4" name="" type="text" />年
-                        <input style="margin:10px 0;" id="input" title="" maxlength="2" name="input" type="text" />月
-                        <input style="margin:10px 0;" id="" title="" maxlength="2" name="" type="text" />日
+                        始于<input style="margin:10px 0;" id="" title="" maxlength="4" name="year1" type="text" />年
+                        <input style="margin:10px 0;" id="input" title="" maxlength="2" name="month1" type="text" />月
+                        <input style="margin:10px 0;" id="" title="" maxlength="2" name="day1" type="text" />日
                     </p>
                     <p>
-                        终于<input style="margin:10px 0;" id="" title="" maxlength="4" name="" type="text" />年
-                        <input style="margin:10px 0;" id="input" title="" maxlength="2" name="input" type="text" />月
-                        <input style="margin:10px 0;" id="" title="" maxlength="2" name="" type="text" />日
+                        终于<input style="margin:10px 0;" id="" title="" maxlength="4" name="year2" type="text" />年
+                        <input style="margin:10px 0;" id="input" title="" maxlength="2" name="month2" type="text" />月
+                        <input style="margin:10px 0;" id="" title="" maxlength="2" name="day2" type="text" />日
                     </p>
                 </div>
                 <div class="content_selectbutton1">
                     <h3>优惠政策</h3>
-                    选项:<select style="width:200px;margin:10px 5px;" id="items" action="/crm/project/detail/" method="POST" name="items" enctype="application/x-www-form-urlencoded">
+                    选项:<select style="width:200px;margin:10px 5px;" id="items" name="items">
                         <option value="1" selected="selected">请选择</option>
                         <option value="2">买就送</option>
                         <option value="3">满就送</option>
@@ -213,14 +213,14 @@
                         <option value="6">积分兑换</option>
                         <option value="7">新品尝鲜价</option>
                     </select>
-                    <input style="float:right;width:100px;height:30px;" type="submit" value="详细设置" />
+                    <input style="float:right;width:100px;height:30px;" type="submit" value="详细设置" formaction="../detail/"/>
                 </div>
 
                 <br /><br /><br /> <!-- 买M送N商品活动价买X送满X送办卡充值 送满立减；积分兑换金钱折扣（即不换钱，换减价）/物品新品尝鲜（试用装）-->
                 <p style="text-align:center">
-                    <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" />
-                    <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" />
-                    <input style="margin:10px 40px" id="submit" value="删除项目" type="submit" />
+                    <input style="margin:10px 40px" id="submit1" value="确认添加" type="submit" name="submit1"/>
+                    <input style="margin:10px 40px" id="submit2" value="保存修改" type="submit" name="submit2" />
+                    <input style="margin:10px 40px" id="submit3" value="删除项目" type="submit" name="submit3" />
                 </p>
                 <br /><br /><br /><br /><br />
             </form>

@@ -21,8 +21,6 @@ def crmHome(request):
 def prmHome(request):
     return render_to_response('PRM首页.html',locals())
 
-@csrf_exempt
-#这里还是有问题，跳不过去，ＴＡＴ
 def crm_adduser(request):
     errors = []
     if request.method == 'POST':
@@ -119,7 +117,7 @@ def favor(request):
         context = RequestContext(request, {'record':record})
         return HttpResponse(template.render(context))
     elif request.method == 'POST':
-        pass
+        return render_to_response('creadit.html',locals())
     else:
         return render_to_response('creadit.html',locals())
 
@@ -129,12 +127,18 @@ def crmproject(request):
     return render_to_response('CRM优惠项目进程.html',locals())
 
 def crmaddproject(request):
+    if request.method == 'GET':
+        pass
+    elif request.method == 'POST':
+
+        pass
     return render_to_response('add_benefit_item.html',locals())
+
 def crmprojectdetail(request):
     #需要按照优惠的类型返回不同的页面，
     if request.method == "POST":
         q = request.POST
-        items = q['items'][0]
+        items = int(q['items'])
         print(items)
         if items == 1:
             return HttpResponseRedirect('/crm/project/add')
