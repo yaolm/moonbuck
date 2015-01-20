@@ -2,11 +2,12 @@
 
 # Create your views here.
 from django.http import HttpResponse,Http404
-from django.template import Template, Context, RequestContext
+from django.template import Template, Context, RequestContext, loader
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 import datetime
+from django.db import connection
 
 from django.db.models import *
 from moonbuck.mis.models import *
@@ -20,8 +21,6 @@ def crmHome(request):
 def prmHome(request):
     return render_to_response('PRM首页.html',locals())
 
-@csrf_exempt
-#这里还是有问题，跳不过去，ＴＡＴ
 def crm_adduser(request):
     errors = []
     if request.method == 'POST':
@@ -63,32 +62,64 @@ def crm_user_searchresult(request):
             #return render_to_response('CRM检索页面.html',locals())
     elif request.method == 'POST':
         query = request.POST
-        print(query)
-        if query.get('participant1')[0] == '1':
+        #print(query)
+        if query.get('participant1') == '1':
             return HttpResponse("nothing to response")
         else:
-            p1 = query['participant1'][0]
-            t1 = query['textcontent1'][0]
+            p1 = query['participant1']
+            t1 = query['textcontent1']
+            raw_sql = 'SELECT sum(orOff) FROM mis_order WHERE orCu_id IN (SELECT id FROM mis_customer WHERE '
+            cursor = connection.cursor()
             if p1 == '2':
                 record = customer.objects.filter(cuName=t1)
+                raw_sql += 'cuName ="' + t1 + '") GROUP BY orCu_id;'
+                #print(raw_sql)
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
+                #print(cuSum)
             elif p1 == '3':
                 record = customer.objects.filter(cuEmail=t1)
+                raw_sql += 'cuEmail ="' + t1 + '") GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
             elif p1 == '4':
                 record = customer.objects.filter(cuScore=int(t1))
+                raw_sql += 'cuScore =' + int(t1) + ') GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
             elif p1 == '5':
-                record = customer.objects.filter()
-                pass
+                rc_sql = "SELECT * FROM mis_customer WHERE id IN (SELECT orCu_id FROM mis_order GROUP BY orCu_id HAVING sum(orOff)=" + t1 + ');'
+                print(rc_sql)
+                record = order.objects.raw(rc_sql)
+                cuSum = int(t1)
             elif p1 == '6':
                 record = customer.objects.filter(cuType=t1)
+                raw_sql += 'cuType ="' + t1 + '") GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
             elif p1 == '7':
                 record = customer.objects.filter(cuId=int(t1))
-            # 这里还没处理return的页面
-            return HttpResponse("something to response")
+                raw_sql += 'cuId =' + int(t1) + ') GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
+            else:
+                record = customer.objects.all()
+            print(record)
+            template = loader.get_template('CRM查询结果.html')
+            context = RequestContext(request, {'record':record,'cuSum':cuSum,})
+            return HttpResponse(template.render(context))
 
 #这里有数据库增加，把商品进行了更新，还没有写积分计算方法的提交
 def favor(request):
-    record=good.objects.all()
-    return render_to_response('credit.html',locals())
+    if request.method == 'GET':
+        record = good.objects.all()
+        template = loader.get_template('credit.html')
+        context = RequestContext(request, {'record':record})
+        return HttpResponse(template.render(context))
+    elif request.method == 'POST':
+        return render_to_response('creadit.html',locals())
+    else:
+        return render_to_response('creadit.html',locals())
 
 #√
 def crmproject(request):
@@ -96,12 +127,18 @@ def crmproject(request):
     return render_to_response('CRM优惠项目进程.html',locals())
 
 def crmaddproject(request):
+    if request.method == 'GET':
+        pass
+    elif request.method == 'POST':
+
+        pass
     return render_to_response('add_benefit_item.html',locals())
+
 def crmprojectdetail(request):
     #需要按照优惠的类型返回不同的页面，
     if request.method == "POST":
-        q=request.POST
-        items=q['items'][0]
+        q = request.POST
+        items = int(q['items'])
         print(items)
         if items == 1:
             return HttpResponseRedirect('/crm/project/add')
@@ -122,7 +159,7 @@ def crmprojectdetail(request):
 
 #√
 def prmproject(request):
-    record=orderMedia.objects.all()
+    record = orderMedia.objects.all()
     return render_to_response('已有公关媒体信息.html',locals())
 #入口存疑
 def prmprojectdetail(request):
