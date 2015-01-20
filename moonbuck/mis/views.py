@@ -130,7 +130,6 @@ def crmaddproject(request):
     if request.method == 'GET':
         pass
     elif request.method == 'POST':
-
         pass
     return render_to_response('add_benefit_item.html',locals())
 
