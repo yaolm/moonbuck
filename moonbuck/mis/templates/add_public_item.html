@@ -1,233 +1,231 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/static/css/metro-bootstrap.css" rel="stylesheet" />
+    <link href="/static/css/metro-bootstrap-responsive.css" rel="stylesheet" />
+    <link href="/static/css/iconFont.css" rel="stylesheet" />
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery.widget.min.js"></script>
+    <script src="/static/js/metro.min.js"></script>
+    <link href="/static/css/mystyle.css" rel="stylesheet" />
+    <link rel="icon" href="/static/image/logo.jpg" />
 
- <link href="/static/css/metro-bootstrap.css" rel="stylesheet" />
-        <link href="/static/css/metro-bootstrap-responsive.css" rel="stylesheet" />
-        <link href="/static/css/iconFont.css" rel="stylesheet">
-        <script src="/static/js/jquery.min.js"></script>
-        <script src="/static/js/jquery.widget.min.js"></script>
-        <script src="/static/js/metro.min.js"></script>
-        <link href="/static/css/mystyle.css" rel="stylesheet" />
-        <link rel="icon" href="/static/image/logo.jpg" />
-       
-
-<title>add_public_item</title>
+    <title>add_public_item</title>
 </head>
-
- <body class="metro">
-        <div class="container">
-            <h1><img src="/static/image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">PRM后台管理系统</small></h1>
-             <p style="text-align:right"><a href="/static/denglu/demo.html">Login</a></p>
-            <nav class="navigation-bar">
-                <div class="navigation-bar-content">
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle"><i class="icon-home"></i>导航栏</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">新手引导</a></li>
-                            <li><a href="#">帮助文档</a></li>
-                            <li><a href="#">建议与意见</a></li>
-                        </ul>
-                    </div>
-                    <span class="element-divider"></span>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">采购管理</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">商品清单</a></li>
-                            <li><a href="#">供应商管理</a></li>
-                            <li><a href="#">采购提醒</a></li>
-                            <li><a href="#">警告设置</a></li>
-                            
-                        </ul>
-                    </div>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">销售管理</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">商品统计</a></li>
-                            <li><a href="#">店面任务</a></li>
-                            <li><a href="#">绩效</a></li>
-                            
-                        </ul>
-                    </div>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">仓库管理</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">货品清单</a></li>
-                            <li><a href="#">仓库分布</a></li>
-                            <li><a href="#">供给情况</a></li>
-                            <li><a href="#">关系变更</a></li>
-                            <li><a href="#">库存警告</a></li>
-                            
-                        </ul>
-                    </div>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">财务管理</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">报表查看</a></li>
-                            <li><a href="#">资金管理</a></li>
-                            <li><a href="#">银行关系</a></li>
-                            <li><a href="#">经销商情况</a></li>
-                           
-                        </ul>
-                    </div>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">客户关系管理</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">用户管理</a></li>
-                            <li><a href="#">制度设置</a></li>
-                            <li><a href="#">优惠管理</a></li>
-                           
-                        </ul>
-                    </div>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">公共关系管理</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">公共项目管理</a></li>
-                            <li><a href="#">公共媒体管理</a></li>
-                           
-                        </ul>
-                    </div>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">知识管理</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">统计情况</a></li>
-                            <li><a href="#">分类管理</a></li>
-                            <li><a href="#">文章权限</a></li>
-                            
-                        </ul>
-                    </div>
-                    <div class="element">
-                        <a href="#" class="dropdown-toggle">基本设置</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">人员管理</a></li>
-                            <li><a href="#">店面管理</a></li>
-                           
-                        </ul>
-                    </div>
+<body class="metro">
+    <div class="container">
+        <h1><img src="/static/image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">PRM后台管理系统</small></h1>
+        <p style="text-align:right"><a href="/static/denglu/demo.html">Login</a></p>
+        <nav class="navigation-bar">
+            <div class="navigation-bar-content">
+                <div class="element">
+                    <a href="#" class="dropdown-toggle"><i class="icon-home"></i>导航栏</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">新手引导</a></li>
+                        <li><a href="#">帮助文档</a></li>
+                        <li><a href="#">建议与意见</a></li>
+                    </ul>
                 </div>
-            </nav>
-<div id="sidebar">
-         <div class="sidebar_box"><span class="bottom"></span>
-            	<h3>Categories</h3>   
-                <div class="content"> 
-                	<ul class="sidebar_list">
-                    	<li class="first"><a href=" ">PRM首页</a ></li>
-                       
-                        <li><a href="#">公关项目管理</a ></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;项目进程</a ></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加项目</a ></li>
-                        <li><a href="#">公关媒体管理</a ></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;已有公关媒体</a ></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加公关媒体</a ></li>
-                                            
-                        
+                <span class="element-divider"></span>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">采购管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">商品清单</a></li>
+                        <li><a href="#">供应商管理</a></li>
+                        <li><a href="#">采购提醒</a></li>
+                        <li><a href="#">警告设置</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">销售管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">商品统计</a></li>
+                        <li><a href="#">店面任务</a></li>
+                        <li><a href="#">绩效</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">仓库管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">货品清单</a></li>
+                        <li><a href="#">仓库分布</a></li>
+                        <li><a href="#">供给情况</a></li>
+                        <li><a href="#">关系变更</a></li>
+                        <li><a href="#">库存警告</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">财务管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">报表查看</a></li>
+                        <li><a href="#">资金管理</a></li>
+                        <li><a href="#">银行关系</a></li>
+                        <li><a href="#">经销商情况</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">客户关系管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#">制度设置</a></li>
+                        <li><a href="#">优惠管理</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">公共关系管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">公共项目管理</a></li>
+                        <li><a href="#">公共媒体管理</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">知识管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">统计情况</a></li>
+                        <li><a href="#">分类管理</a></li>
+                        <li><a href="#">文章权限</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="#" class="dropdown-toggle">基本设置</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+                        <li><a href="#">人员管理</a></li>
+                        <li><a href="#">店面管理</a></li>
+
                     </ul>
                 </div>
             </div>
-         </div>
+        </nav>
+        <div id="sidebar">
+            <div class="sidebar_box">
+                <span class="bottom"></span>
+                <h3>Categories</h3>
+                <div class="content">
+                    <ul class="sidebar_list">
+                        <li class="first"><a href=" ">PRM首页</a></li>
 
-<div class="biaodan">
-           
-<h2 align="center">公关项目信息</h2>
-<form action="#">
-<!--媒体类型
-服务类型
-受众类型
-起止时间
-点击量
-反馈评分
-实际交易价格
--->
-       
-            
+                        <li><a href="#">公关项目管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;项目进程</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加项目</a></li>
+                        <li><a href="#">公关媒体管理</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;已有公关媒体</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加公关媒体</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="biaodan">
+
+            <h2 align="center">公关项目信息</h2>
+            <!--<form action="#">-->
+            <!--媒体类型
+            服务类型
+            受众类型
+            起止时间
+            点击量
+            反馈评分
+            实际交易价格
+            -->
+
+
+            <form>
                 <div class="content_selectbutton1">
-                <h3>基本信息</h3>
-                <form>
-                   媒体类型: <select id="media" name="media">
-                        <option value="1"  selected="selected">请选择</option>
+                    <h3>基本信息</h3>
+                    媒体类型: <select id="media" name="media">
+                        <option value="1" selected="selected">请选择</option>
                         <option value="2">微博</option>
                         <option value="3">微信平台</option>
                         <option value="4">新闻网站</option>
                         <option value="5">电视</option>
                         <option value="6">电台</option>
                         <option value="7">报刊</option>
-                       
+
                     </select>
                     服务类型:<select id="service" name="service">
-                    <option value="1"  selected="selected">请选择</option>
+                        <option value="1" selected="selected">请选择</option>
                         <option value="2">刊登</option>
                         <option value="3">转发</option>
                         <option value="4">评论</option>
                         <option value="5">报道</option>
-                       
+
                     </select>
-                    </form>
-                    <td>受众类型：<select id="shouzhongleixing" name="shouzhongleixing">
-                        <option value="1"  selected="selected">请选择</option>
+                    受众类型：<select id="shouzhongleixing" name="shouzhongleixing">
+                        <option value="1" selected="selected">请选择</option>
                         <option value="2">全民</option>
                         <option value="3">微信用户</option>
                         <option value="4">微博用户</option>
                         <option value="5">学生</option>
                         <option value="6">男性群体</option>
                         <option value="7">女性群体</option>
-                    <select></td>
-                     <p>
-            投放时间：</br>始于<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
-            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="input" type="text" />月
-            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="text" />日</p>
-          <p>
-            终于<input style="margin:10px 0px;" id=""  title="" maxlength="4"  name="" type="text" />年
-            <input style="margin:10px 0px;" id="input"  title="" maxlength="2"  name="input" type="text" />月
-            <input style="margin:10px 0px;" id=""  title="" maxlength="2"  name="" type="text" />日</p>
-                 </div>
-                 
-         
-          <div class="content_selectbutton1">
-           <h3>后期反馈</h3>
-           <p>
-            点击量：&nbsp;<input style="margin:10px auto;" id=""  title="" name="" type="text" /></p>
-          <p>实际交易价格：</br><input style="margin:10px 10px 10px 60px;" id=""  title="" name="" type="text" />元</p>
-            <p>项目评分:<input style="margin:10px auto;" id=""  title="" name="" type="text" />（满分为10分）</p>
-            
-          </div>
-         
-       </br></br></br> 
+                    </select>
+                    <p>
+                        投放时间：<br />始于<input style="margin:10px 0;" id="" title="" maxlength="4" name="" type="text" />年
+                        <input style="margin:10px 0;" id="input" title="" maxlength="2" name="input" type="text" />月
+                        <input style="margin:10px 0;" id="" title="" maxlength="2" name="" type="text" />日
+                    </p>
+                    <p>
+                        终于<input style="margin:10px 0;" id="" title="" maxlength="4" name="" type="text" />年
+                        <input style="margin:10px 0;" id="input" title="" maxlength="2" name="input" type="text" />月
+                        <input style="margin:10px 0;" id="" title="" maxlength="2" name="" type="text" />日
+                    </p>
+                </div>
 
- <p align="center";> <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> <input style="margin:10px 40px" id="submit" value="保存编辑" type="submit" /> <input style="margin:10px 40px" id="submit" value="删除项目" type="submit" /> </p>
-        
-   </br></br></br></br></br>
-    </div>
-    
-	  <nav class="navigation-bar fixed-bottom light">
-                <nav class="navigation-bar-content">
-                    <div class="element place-right">
-                        <ul class="element-menu drop-up">
-                            <li>
-                                <a class="dropdown-toggle without-icon" href="#" style="padding:0 !important;">
-                                    <span class="icon-cog"></span>
-                                </a>
-                                <ul class="dropdown-menu place-right" data-role="dropdown">
-                                    <li><a href="#">锁定</a></li>
-                                    <li><a href="#">注销</a></li>
-                                    <li><a href="#">退出</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <span class="element-divider place-right"></span>
-                    <button class="element  image-button image-left place-right">
-                        Moonbuck
-                        <img src="/static/image/11.jpg" />
 
-                    </button>
-                    <span class="element-divider place-right"></span>
-                    <div class="element place-right">
-                        <span>北京大学信息管理系版权所有&copy;</span>
-                    </div>
-                </nav>
+                <div class="content_selectbutton1">
+                    <h3>后期反馈</h3>
+                    <p>
+                        点击量：&nbsp;<input style="margin:10px auto;" id="" title="" name="" type="text" />
+                    </p>
+                    <p>实际交易价格：<br /><input style="margin:10px 10px 10px 60px;" id="" title="" name="" type="text" />元</p>
+                    <p>项目评分:<input style="margin:10px auto;" id="" title="" name="" type="text" />（满分为10分）</p>
+                </div>
+
+                <br /><br /><br />
+                <p align="center" ;=;> <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" /> <input style="margin:10px 40px" id="submit" value="保存编辑" type="submit" /> <input style="margin:10px 40px" id="submit" value="删除项目" type="submit" /> </p>
+
+                <br /><br /><br /><br /><br />
+            </form>
+        </div>
+
+        <nav class="navigation-bar fixed-bottom light">
+            <nav class="navigation-bar-content">
+                <div class="element place-right">
+                    <ul class="element-menu drop-up">
+                        <li>
+                            <a class="dropdown-toggle without-icon" href="#" style="padding:0 !important;">
+                                <span class="icon-cog"></span>
+                            </a>
+                            <ul class="dropdown-menu place-right" data-role="dropdown">
+                                <li><a href="#">锁定</a></li>
+                                <li><a href="#">注销</a></li>
+                                <li><a href="#">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <span class="element-divider place-right"></span>
+                <button class="element  image-button image-left place-right">
+                    Moonbuck
+                    <img src="/static/image/11.jpg" />
+                </button>
+                <span class="element-divider place-right"></span>
+                <div class="element place-right">
+                    <span>北京大学信息管理系版权所有&copy;</span>
+                </div>
             </nav>
-            
-</body>
+        </nav>
 
+    </div>
+
+</body>
 </html>
