@@ -51,6 +51,13 @@ class orderPiece(models.Model):
     def __unicode__(self):
         return self.opId,self.opPiece
 
+class good(models.Model):
+    goId=models.IntegerField(max_length=20,null=False)
+    goName=models.CharField(max_length=20,null=True)
+
+    def __unicode__(self):
+        return self.goName
+
 class project(models.Model):
     poId = models.IntegerField(max_length=10,null=False)
     #顾客类型处理数据库里不好做啊
