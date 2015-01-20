@@ -68,22 +68,26 @@
                         <li><a href="#">银行关系</a></li>
                         <li><a href="#">经销商情况</a></li>
 
-                    </ul>
-                </div>
-                <div class="element">
-                    <a href="#" class="dropdown-toggle">客户关系管理</a>
-                    <ul class="dropdown-menu" data-role="dropdown">
-                        <li><a href="#">用户管理</a></li>
-                        <li><a href="#">制度设置</a></li>
-                        <li><a href="#">优惠管理</a></li>
+
 
                     </ul>
                 </div>
                 <div class="element">
-                    <a href="#" class="dropdown-toggle">公共关系管理</a>
+                    <a href="/crm/" class="dropdown-toggle">客户关系管理</a>
                     <ul class="dropdown-menu" data-role="dropdown">
-                        <li><a href="#">公共项目管理</a></li>
-                        <li><a href="#">公共媒体管理</a></li>
+                        <li><a href="/crm/search/">用户管理</a></li>
+                        <li><a href="/crm/favor/">制度设置</a></li>
+                        <li><a href="/crm/project/">优惠管理</a></li>
+
+                    </ul>
+                </div>
+                <div class="element">
+                    <a href="/prm/" class="dropdown-toggle">公共关系管理</a>
+                    <ul class="dropdown-menu" data-role="dropdown">
+
+                        <li><a href="/prm/project/">公共项目管理</a></li>
+
+                        <li><a href="/prm/project/detail/">公共媒体管理</a></li>
 
                     </ul>
                 </div>
@@ -104,29 +108,35 @@
 
                     </ul>
                 </div>
+
             </div>
         </nav>
 
         <div id="sidebar">
+        
             <div class="sidebar_box">
                 <span class="bottom"></span>
                 <h3>Categories</h3>
                 <div class="content">
                     <ul class="sidebar_list">
-                        <li class="first"><a href="#">CRM首页</a></li>
+                        <li class="first"><a href="/crm/">CRM首页</a></li>
 
-                        <li><a href="#">用户管理</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;用户查询</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加用户</a></li>
+                        <li><a href="/crm/search/">用户管理</a></li>
+                        <li><a href="/crm/search/">&nbsp;&nbsp;&nbsp;用户查询</a></li>
+                        <li><a href="/crm/add/">&nbsp;&nbsp;&nbsp;添加用户</a></li>
 
-                        <li><a href="#">制度设置</a></li>
-                        <li><a href="#">优惠管理</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;优惠项目进程</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加优惠项目</a></li>
+                        <li><a href="/crm/project/detail/">制度设置</a></li>
+                        <li><a href="/crm/project/">优惠管理</a></li>
+                        <li><a href="/crm/project/">&nbsp;&nbsp;&nbsp;优惠项目进程</a></li>
+                        <li><a href="/crm/project/add/">&nbsp;&nbsp;&nbsp;添加优惠项目</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+
+
+
 
         <div class="biaodan">
 
@@ -148,7 +158,7 @@
                 <p> 地址：<input style="width:600px;" id="" title="" name="address" value="请输入居住地址" type="text" /></p>
 
                 <p>
-                    创建日期<input style="margin:10px 0;" id="" title="" maxlength="4" name="cryear" type="text"/>年
+                    创建日期<input style="margin:10px 0;" id="" title="" maxlength="4" name="cryear" type="text" />年
                     <input style="margin:10px 0;" id="input" title="" maxlength="2" name="crmonth" type="month" />月
                     <input style="margin:10px 0;" id="" title="" maxlength="2" name="crday" type="text" />日
                 </p>
@@ -160,6 +170,7 @@
                 <p>
                     用户等级：<select style="width:200px;height:30px;margin:10px 10px;" id="my-dropdown" name="my-dropdown">
                         <option value="1" selected="selected">请选择</option>
+
                         <option value="2">黄金用户</option>
                         <option value="3">钢铁用户</option>
                         <option value="4">重铅用户</option>
@@ -167,7 +178,7 @@
                     </select>
                 </p>
             </form>
-            <p align="center" ;=;>
+            <p align="center" >
                 <input style="margin:10px 40px" id="submit" value="确认添加" type="submit" />
                 <input style="margin:10px 40px" id="submit" value="保存修改" type="submit" />
                 <input style="margin:10px 40px" id="submit" value="删除用户" type="submit" />

@@ -37,6 +37,7 @@
                         <li><a href="#">采购提醒</a></li>
                         <li><a href="#">警告设置</a></li>
 
+
                     </ul>
                 </div>
                 <div class="element">
@@ -70,19 +71,21 @@
                     </ul>
                 </div>
                 <div class="element">
-                    <a href="#" class="dropdown-toggle">客户关系管理</a>
+                    <a href="/crm/" class="dropdown-toggle">客户关系管理</a>
                     <ul class="dropdown-menu" data-role="dropdown">
-                        <li><a href="#">用户管理</a></li>
-                        <li><a href="#">制度设置</a></li>
-                        <li><a href="#">优惠管理</a></li>
+                        <li><a href="/crm/search/">用户管理</a></li>
+                        <li><a href="/crm/favor/">制度设置</a></li>
+                        <li><a href="/crm/project/">优惠管理</a></li>
 
                     </ul>
                 </div>
                 <div class="element">
-                    <a href="#" class="dropdown-toggle">公共关系管理</a>
+                    <a href="/prm/" class="dropdown-toggle">公共关系管理</a>
                     <ul class="dropdown-menu" data-role="dropdown">
-                        <li><a href="#">公共项目管理</a></li>
-                        <li><a href="#">公共媒体管理</a></li>
+
+                        <li><a href="/prm/project/">公共项目管理</a></li>
+
+                        <li><a href="/prm/project/detail/">公共媒体管理</a></li>
 
                     </ul>
                 </div>
@@ -103,24 +106,27 @@
 
                     </ul>
                 </div>
+
             </div>
         </nav>
         <div id="sidebar">
+
             <div class="sidebar_box">
                 <span class="bottom"></span>
                 <h3>Categories</h3>
                 <div class="content">
                     <ul class="sidebar_list">
-                        <li class="first"><a href="#">CRM首页</a></li>
+                        <li class="first"><a href="/crm/">CRM首页</a></li>
 
-                        <li><a href="#">用户管理</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;用户查询</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加用户</a></li>
+                        <li><a href="/crm/search/">用户管理</a></li>
+                        <li><a href="/crm/search/">&nbsp;&nbsp;&nbsp;用户查询</a></li>
+                        <li><a href="/crm/add/">&nbsp;&nbsp;&nbsp;添加用户</a></li>
 
-                        <li><a href="#">制度设置</a></li>
-                        <li><a href="#">优惠管理</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;优惠项目进程</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;添加优惠项目</a></li>
+                        <li><a href="/crm/project/detail/">制度设置</a></li>
+                        <li><a href="/crm/project/">优惠管理</a></li>
+                        <li><a href="/crm/project/">&nbsp;&nbsp;&nbsp;优惠项目进程</a></li>
+                        <li><a href="/crm/project/add/">&nbsp;&nbsp;&nbsp;添加优惠项目</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -213,12 +219,12 @@
                         <option value="6">积分兑换</option>
                         <option value="7">新品尝鲜价</option>
                     </select>
-                    <input style="float:right;width:100px;height:30px;" type="submit" value="详细设置" formaction="../detail/"/>
+                    <input style="float:right;width:100px;height:30px;" type="submit" value="详细设置" formaction="../detail/" />
                 </div>
 
                 <br /><br /><br /> <!-- 买M送N商品活动价买X送满X送办卡充值 送满立减；积分兑换金钱折扣（即不换钱，换减价）/物品新品尝鲜（试用装）-->
                 <p style="text-align:center">
-                    <input style="margin:10px 40px" id="submit1" value="确认添加" type="submit" name="submit1"/>
+                    <input style="margin:10px 40px" id="submit1" value="确认添加" type="submit" name="submit1" />
                     <input style="margin:10px 40px" id="submit2" value="保存修改" type="submit" name="submit2" />
                     <input style="margin:10px 40px" id="submit3" value="删除项目" type="submit" name="submit3" />
                 </p>
