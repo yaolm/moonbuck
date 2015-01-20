@@ -64,7 +64,7 @@ def crm_user_searchresult(request):
             #return render_to_response('CRM检索页面.html',locals())
     elif request.method == 'POST':
         query = request.POST
-        print(query)
+        #print(query)
         if query.get('participant1') == '1':
             return HttpResponse("nothing to response")
         else:
@@ -74,20 +74,36 @@ def crm_user_searchresult(request):
             cursor = connection.cursor()
             if p1 == '2':
                 record = customer.objects.filter(cuName=t1)
-                raw_sql += 'cuName="' + t1 + '");'
+                raw_sql += 'cuName ="' + t1 + '") GROUP BY orCu_id;'
+                #print(raw_sql)
                 cursor.execute(raw_sql)
                 cuSum = cursor.fetchone()[0]
-                print(cuSum)
+                #print(cuSum)
             elif p1 == '3':
                 record = customer.objects.filter(cuEmail=t1)
+                raw_sql += 'cuEmail ="' + t1 + '") GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
             elif p1 == '4':
                 record = customer.objects.filter(cuScore=int(t1))
+                raw_sql += 'cuScore =' + int(t1) + ') GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
             elif p1 == '5':
-                record = order.objects.raw(raw_sql)
+                rc_sql = "SELECT * FROM mis_customer WHERE id IN (SELECT orCu_id FROM mis_order GROUP BY orCu_id HAVING sum(orOff)=" + t1 + ');'
+                print(rc_sql)
+                record = order.objects.raw(rc_sql)
+                cuSum = int(t1)
             elif p1 == '6':
                 record = customer.objects.filter(cuType=t1)
+                raw_sql += 'cuType ="' + t1 + '") GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
             elif p1 == '7':
                 record = customer.objects.filter(cuId=int(t1))
+                raw_sql += 'cuId =' + int(t1) + ') GROUP BY orCu_id;'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
             else:
                 record = customer.objects.all()
             print(record)
