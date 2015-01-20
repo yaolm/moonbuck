@@ -290,3 +290,4 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 moonbuck/__pycache__
+*.pyc

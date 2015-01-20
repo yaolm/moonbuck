@@ -7,6 +7,7 @@ from django.template.loader import get_template
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 import datetime
+from django.db import connection
 
 from django.db.models import *
 from moonbuck.mis.models import *
@@ -64,34 +65,39 @@ def crm_user_searchresult(request):
     elif request.method == 'POST':
         query = request.POST
         print(query)
-        if query.get('participant1')[0] == '1':
+        if query.get('participant1') == '1':
             return HttpResponse("nothing to response")
         else:
-            p1 = query['participant1'][0]
-            t1 = query['textcontent1'][0]
+            p1 = query['participant1']
+            t1 = query['textcontent1']
+            raw_sql = 'SELECT sum(orOff) FROM mis_order WHERE orCu_id IN (SELECT id FROM mis_customer WHERE '
+            cursor = connection.cursor()
             if p1 == '2':
-                print("Right!")
                 record = customer.objects.filter(cuName=t1)
+                raw_sql += 'cuName="' + t1 + '");'
+                cursor.execute(raw_sql)
+                cuSum = cursor.fetchone()[0]
+                print(cuSum)
             elif p1 == '3':
                 record = customer.objects.filter(cuEmail=t1)
             elif p1 == '4':
                 record = customer.objects.filter(cuScore=int(t1))
             elif p1 == '5':
-                # 这里还没统计已有订单来计算总消费额
-                pass
+                record = order.objects.raw(raw_sql)
             elif p1 == '6':
                 record = customer.objects.filter(cuType=t1)
             elif p1 == '7':
                 record = customer.objects.filter(cuId=int(t1))
-            # 不知道为什么结果集总是空的
+            else:
+                record = customer.objects.all()
             print(record)
             template = loader.get_template('CRM查询结果.html')
-            context = RequestContext(request, {'record':record,})
+            context = RequestContext(request, {'record':record,'cuSum':cuSum,})
             return HttpResponse(template.render(context))
 
 #这里有数据库增加，把商品进行了更新，还没有写积分计算方法的提交
 def favor(request):
-    record=good.objects.all()
+    record = good.objects.all()
     return render_to_response('credit.html',locals())
 
 #√
@@ -104,8 +110,8 @@ def crmaddproject(request):
 def crmprojectdetail(request):
     #需要按照优惠的类型返回不同的页面，
     if request.method == "POST":
-        q=request.POST
-        items=q['items'][0]
+        q = request.POST
+        items = q['items'][0]
         print(items)
         if items == 1:
             return HttpResponseRedirect('/crm/project/add')
@@ -126,7 +132,7 @@ def crmprojectdetail(request):
 
 #√
 def prmproject(request):
-    record=orderMedia.objects.all()
+    record = orderMedia.objects.all()
     return render_to_response('已有公关媒体信息.html',locals())
 #入口存疑
 def prmprojectdetail(request):
