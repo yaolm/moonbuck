@@ -2,7 +2,7 @@
 
 # Create your views here.
 from django.http import HttpResponse,Http404
-from django.template import Template, Context, RequestContext
+from django.template import Template, Context, RequestContext, loader
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
@@ -70,20 +70,24 @@ def crm_user_searchresult(request):
             p1 = query['participant1'][0]
             t1 = query['textcontent1'][0]
             if p1 == '2':
+                print("Right!")
                 record = customer.objects.filter(cuName=t1)
             elif p1 == '3':
                 record = customer.objects.filter(cuEmail=t1)
             elif p1 == '4':
                 record = customer.objects.filter(cuScore=int(t1))
             elif p1 == '5':
-                record = customer.objects.filter()
+                # 这里还没统计已有订单来计算总消费额
                 pass
             elif p1 == '6':
                 record = customer.objects.filter(cuType=t1)
             elif p1 == '7':
                 record = customer.objects.filter(cuId=int(t1))
-            # 这里还没处理return的页面
-            return HttpResponse("something to response")
+            # 不知道为什么结果集总是空的
+            print(record)
+            template = loader.get_template('CRM查询结果.html')
+            context = RequestContext(request, {'record':record,})
+            return HttpResponse(template.render(context))
 
 #这里有数据库增加，把商品进行了更新，还没有写积分计算方法的提交
 def favor(request):

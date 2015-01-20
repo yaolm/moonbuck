@@ -1,9 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
-	<head>
-   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    	 <link href="/static/css/metro-bootstrap.css" rel="stylesheet" />
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="/static/css/metro-bootstrap.css" rel="stylesheet" />
         <link href="/static/css/metro-bootstrap-responsive.css" rel="stylesheet" />
         <link href="/static/css/iconFont.css" rel="stylesheet">
         <script src="/static/js/jquery.min.js"></script>
@@ -11,17 +10,13 @@
         <script src="/static/js/metro.min.js"></script>
         <link href="/static/css/mystyle.css" rel="stylesheet" />
         <link rel="icon" href="/static/image/logo.jpg" />
-
-
         <title>crm_retrival_result</title>
-
-    	<style></style>
-    
-	</head>
+        <style></style>
+    </head>
     <body class="metro">
         <div class="container">
             <h1><img src="/static/image/logo.jpg" alt="logo" />Moonbuck<small class="on-right">CRM后台管理系统</small></h1>
-             <p style="text-align:right"><a href="/static/denglu/demo.html">Login</a></p>
+            <p style="text-align:right"><a href="/static/denglu/demo.html">Login</a></p>
             <nav class="navigation-bar">
                 <div class="navigation-bar-content">
                     <div class="element">
@@ -112,10 +107,10 @@
          <!------------------------------------------------------------------->
                  <div id="sidebar">
          <div class="sidebar_box"><span class="bottom"></span>
-            	<h3>Categories</h3>   
+                <h3>Categories</h3>   
                 <div class="content"> 
-                	<ul class="sidebar_list">
-                    	<li class="first"><a href="#">CRM首页</a></li>
+                    <ul class="sidebar_list">
+                        <li class="first"><a href="#">CRM首页</a></li>
                        
                         <li><a href="#">用户管理</a></li>
                         <li><a href="#">&nbsp;&nbsp;&nbsp;用户查询</a></li>
@@ -131,20 +126,22 @@
          </div>
          <!------------------------------------------------------------------->
          <div id="content_result">
-   		  	<div class="select_result" style="overflow-x:hidden;overflow-y:scroll;width:800px;height:400px;">
+            <div class="select_result" style="overflow-x:hidden;overflow-y:scroll;width:800px;height:400px;">
             <h2>检索结果</h2>
-            	<table class="select_result">
-					<thead>
-                    	<th>卡号</th>
-                        <th>姓名</th>
-                        <th>邮箱</th>
-                        <th>手机</th>
-                        <th>积分</th>
-                        <th>用户等级</th>
-                        <th>累计消费额</th>
-                     </thead>
-                     <tbody id="highlight">
-{% for rec in record %}
+                <table class="select_result">
+                    <thead>
+                        <tr>
+                            <th>卡号</th>
+                            <th>姓名</th>
+                            <th>邮箱</th>
+                            <th>手机</th>
+                            <th>积分</th>
+                            <th>用户等级</th>
+                            <th>累计消费额</th>
+                        </tr>
+                    </thead>
+                    <tbody id="highlight">
+                    {% for rec in record %}
                         <tr>
                            <td>{{rec.cuId}}</td>
                            <td>{{rec.cuName}}</td>
@@ -154,14 +151,14 @@
                            <td>{{rec.cuType}}</td>
                            <td>{{cuSum}}</td>
                         </tr>
-{% endfor %}
+                    {% endfor %}
                      </tbody>                                                
                 </table>
             </div>
             <div class="select_resultbuttom">
-            	<form>
-                	
-                	<input type="button" value="新建">
+                <form>
+                    
+                    <input type="button" value="新建">
                     <input type="button" value="修改">
                     <input type="button" value="删除">	
                 </form>
@@ -197,5 +194,5 @@
                 </nav>
             </nav>
         </div>
-	</body>
+    </body>
 </html>
