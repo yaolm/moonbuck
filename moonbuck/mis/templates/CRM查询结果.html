@@ -152,6 +152,11 @@
                            <td>{{cuSum}}</td>
                         </tr>
                     {% endfor %}
+                    {% if not record %}
+                        <tr>
+                            <td colspan="7">没有可以显示的结果</td>
+                        </tr>
+                    {% endif %}
                      </tbody>                                                
                 </table>
             </div>
